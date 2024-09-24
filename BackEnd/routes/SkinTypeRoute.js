@@ -4,7 +4,7 @@ import multer from "multer";
 
 const SkinTRouter = express.Router();
 
-//Image Stroage Engine
+//Image Stroage Engine..
 
 const storage = multer.diskStorage({
   destination: "uploads",

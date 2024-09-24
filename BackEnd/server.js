@@ -3,7 +3,7 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import SkinTRouter from "./routes/SkinTypeRoute.js";
 
-// app config
+// app configr
 const app = express();
 const port = 4000;
 

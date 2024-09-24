@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//comment
 const SkinTypeSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
