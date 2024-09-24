@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//comment
 export const connectDB = async () => {
   await mongoose
     .connect(

@@ -1,7 +1,7 @@
 import SkinTypeModel from "../models/SkinTypeModels.js";
 import fs from "fs";
 
-//add Skin Type Item
+//add Skin Type Items
 
 const addST = async (req, res) => {
   //  there is ERROR here
