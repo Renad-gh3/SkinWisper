@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 //comment
 const SkinTypeSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  category: { type: String, required: true },
-  link: { type: String, required: true },
-  image: { type: String, required: true },
+  stage: { type: String, required: true },
+  product: { type: String, required: true },
+  suggestion: { type: String, required: true },
+  skinType: { type: String, required: true },
+  period: { type: String, required: true }
 });
 
 const SkinTypeModel =
