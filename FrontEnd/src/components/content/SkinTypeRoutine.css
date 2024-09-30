@@ -4,9 +4,10 @@
     text-align: left;
     padding: 30px;
     font-family: 'Roboto', sans-serif;
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #fff;
+    box-sizing: border-box;
 }
 .routine-container h2,
 .routine-container p {

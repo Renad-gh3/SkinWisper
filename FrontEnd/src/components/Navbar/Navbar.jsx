@@ -1,21 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Navbar.css'
 import { assets } from "../../assets/assets";
-
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  
-  const [menu,setMenu] = useState("Home");
-
   return (
     <div className= 'navbar'>
       <img src={assets.logo} alt="" className="logo" />
       <ul className="navbar-menu">
-        <li onClick={() => setMenu("Home")} className = {menu === "Home" ? "active" : ""}> Home</li>
-        <li onClick={() => setMenu("Menu")} className = {menu === "Menu" ? "active" : ""}> Menu</li>
-        <li onClick={() => setMenu("Skin test")} className = {menu === "Skin test" ? "active" : ""}> Skin tests</li>
-        <li onClick={() => setMenu("Contact-us")} className={menu === "Contact-us" ? "active" : ""}>Contact-us</li>
-
+        <li>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/menu" className={({ isActive }) => (isActive ? "active" : "")}>Our Shop</NavLink>
+        </li>
+        <li>
+          <NavLink to="/skin-test" className={({ isActive }) => (isActive ? "active" : "")}>Skin tests</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact-us" className={({ isActive }) => (isActive ? "active" : "")}>Contact-us</NavLink>
+        </li>
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
@@ -23,10 +27,10 @@ const Navbar = () => {
           <img src = {assets.cart_icon} alt=''/>
           <div className= "dot"></div>
         </div>
-        <button>sign in</button>
+        <button>Sign-in</button>
       </div>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;
