@@ -4,6 +4,7 @@ import Header from '../Header/Header.jsx'
 import ExploreMenu from '../ExploreMenu/ExploreMenu.jsx'
 import SkinTypeRoutine from '../content/SkinTypeRoutine.jsx'
 import Footer from '../Footer/Footer.jsx'
+
 const fullskintype = () => {
    const[category,setCategory]=useState("All")
   return (

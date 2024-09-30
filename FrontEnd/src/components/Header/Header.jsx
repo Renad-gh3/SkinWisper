@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './Header.css';  // Import the CSS file for styles
-import headerImage from '/Users/dode86/Desktop/skinWhisper_project/SkinWisper/FrontEnd/src/assets/header1.png';  // Import the image
+import headerImage from "../../assets/header1.png";  // Import the image
 
 const Header = () => {
     return (

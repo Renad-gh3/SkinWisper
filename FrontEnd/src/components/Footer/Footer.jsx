@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';  // Import the CSS file for the footer styles
-import InstagramIcon from '../../assets/instagram.png';  // Import Instagram icon
-import EmailIcon from '../../assets/email.png';  // Import Email icon
-import MadeInSaudiIcon from '../../assets/saudi.png';  // Import "Made in Saudi" icon
+import InstagramIcon from "../../assets/instagram.png"
+import EmailIcon from "../../assets/email.png";  // Import Email icon
+import MadeInSaudiIcon from "../../assets/saudi.png";  // Import "Made in Saudi" icon
 
 const Footer = () => {
     return (

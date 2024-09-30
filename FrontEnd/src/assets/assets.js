@@ -7,7 +7,7 @@ import normal from './normal.png'
 import Dry from './Dry.png'
 import oily from './oily.png'
 import sensetive from'./sensetive.png'
-
+//import Box1 from './Box1.png'
 
 export const menu_list = [
     { menu_name:"Combination Skin",menu_image: combination },
@@ -20,5 +20,7 @@ export const menu_list = [
 export const assets = {
     logo,
     search_icon,
-    cart_icon,header,menu_list
+    cart_icon,
+    header,
+    menu_list
 }
