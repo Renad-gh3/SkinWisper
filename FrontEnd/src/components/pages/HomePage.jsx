@@ -1,9 +1,8 @@
 import './Home.css';
-import Box1 from'../assets/Box1.png';
-import Box2 from'../assets/Box2.png';
-import Box3 from'../assets/Box3.png';
-import Navbar from './Navbar/Navbar';
-
+import Box1 from'/Users/dode86/Desktop/skinWhisper_project/SkinWisper/FrontEnd/src/assets/Box1.png';
+import Box2 from'/Users/dode86/Desktop/skinWhisper_project/SkinWisper/FrontEnd/src/assets/Box2.png';
+import Box3 from'/Users/dode86/Desktop/skinWhisper_project/SkinWisper/FrontEnd/src/assets/Box3.png';
+import Navbar from '../Navbar/Navbar';
 
 const HomePage = () => {
 

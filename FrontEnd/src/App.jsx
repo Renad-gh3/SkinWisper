@@ -1,6 +1,6 @@
 
-import HomePage from"../src/components/HomePage.jsx"
-
+import HomePage from "./components/pages/HomePage.jsx";
+import React from 'react';
 const App = () => {
   return (
     <div className='app'>
