@@ -1,5 +1,5 @@
 import express from "express";
-import { addST } from "../controllers/SkinTypeController.js";
+import { addST , listST , removeST} from "../controllers/SkinTypeController.js";
 import multer from "multer";
 
 const SkinTRouter = express.Router();
@@ -16,5 +16,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 SkinTRouter.post("/add", upload.single("image"), addST);
+SkinTRouter.get("/list", listST);
+SkinTRouter.post("/remove", removeST);
 
 export default SkinTRouter;
