@@ -1,0 +1,74 @@
+
+.header {
+    background-size: cover;  /* Ensure the background image covers the entire header */
+    background-position: center;  /* Center the background image */
+    background-repeat: no-repeat;  /* No repeating */
+    padding: 80px 50px;
+    color: white;
+    position: relative;
+    height: 400px;  /* Set height for the header */
+}
+
+/* Container for Header Elements */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;  /* Align the text to the right */
+    align-items: center;
+    height: 100%;  /* Full height to center text vertically */
+}
+
+/* Text Section */
+.header-text {
+    text-align: right;  /* Align text to the right */
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* CTA Button */
+.get-started-button {
+    background-color: white;
+    color: #5b9c3d;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.get-started-button:hover {
+    background-color: #e0e0e0;
+    color: #5b9c3d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .get-started-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
