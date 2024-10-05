@@ -1,52 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './SkinTypeRoutine.css';
 
 const SkinRoutine = () => {
   const [selectedRoutine, setSelectedRoutine] = useState('Morning');
+  const [routineData, setRoutineData] = useState([]);
   const [activeStep, setActiveStep] = useState(null);
 
-  const routineContent = {
-    "Morning": [
-      { 
-        stage: "First, apply the cleanser", 
-        product: "Gentle Cleanser", 
-        suggestion: "Use a gentle cleanser to refresh your skin." 
-      },
-      { 
-        stage: "Next, apply the treatment", 
-        product: "Hydrating Serum", 
-        suggestion: "This serum locks in moisture and balances your skin." 
-      },
-      { 
-        stage: "Finally, protect your skin", 
-        product: "SPF Moisturizer", 
-        suggestion: "Apply an SPF moisturizer to protect your skin from UV rays." 
+  // Fetch data from backend when the component loads
+  useEffect(() => {
+    const fetchRoutineData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/SkinType/list');
+        setRoutineData(response.data.data); // Assumes the response contains the data in a field called 'data'
+      } catch (error) {
+        console.error('Error fetching routine data:', error);
       }
-    ],
-    "Evening": [
-      { 
-        stage: "First, cleanse your face", 
-        product: "Hydrating Cleanser", 
-        suggestion: "Use this to remove makeup and impurities." 
-      },
-      { 
-        stage: "Next, treat your skin", 
-        product: "Retinol Serum", 
-        suggestion: "Apply retinol to help with skin regeneration overnight." 
-      },
-      { 
-        stage: "Lastly, moisturize deeply", 
-        product: "Night Cream", 
-        suggestion: "Use a rich cream to nourish your skin as you sleep." 
-      }
-    ]
-  };
+    };
 
-  const routine = routineContent[selectedRoutine];
+    fetchRoutineData();
+  }, []);
 
   const handleToggle = (index) => {
     setActiveStep(activeStep === index ? null : index);
   };
+
+  const filteredRoutine = routineData.filter(routine => routine.period.toLowerCase() === selectedRoutine.toLowerCase());
 
   return (
     <div className="routine-container">
@@ -73,7 +52,7 @@ const SkinRoutine = () => {
 
       {/* Routine Steps */}
       <div className="routine-steps">
-        {routine.map((item, index) => (
+        {filteredRoutine.map((item, index) => (
           <div key={index} className="routine-step">
             <div className="routine-step-header" onClick={() => handleToggle(index)}>
               <h3>{index + 1}. {item.stage}</h3>
