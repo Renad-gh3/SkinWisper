@@ -1,55 +1,60 @@
 import SkinTypeModel from "../models/SkinTypeModels.js";
 import fs from "fs";
 
-//add Product Items
-
+// Add Product Items
 const addST = async (req, res) => {
-  //  there is ERROR here
-  //let image_filename = `${req.file.filename}`;
-
   const SkinType = new SkinTypeModel({
-    stage: req.body.stage,
-    product: req.body.product,
-    suggestion: req.body.suggestion,
-    skinType: req.body.skinType,
-    period: req.body.period
+    stage1: req.body.stage1,
+    stage2: req.body.stage2,
+    stage3: req.body.stage3,
+    S1product: req.body.S1product,
+    S1suggestion: req.body.S1suggestion,
+    S2product: req.body.S2product,
+    S2suggestion: req.body.S2suggestion,
+    S3product: req.body.S3product,
+    S3suggestion: req.body.S3suggestion,
+    skinType: req.body.skinType.toLowerCase(), // Ensure consistency in skinType input
+    period: req.body.period.toLowerCase(), // Ensure consistency in period input
   });
+
   try {
     await SkinType.save();
-    res.json({ success: true, massage: "SkinType Item Added" });
+    res.json({ success: true, message: "SkinType Item Added" });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, massage: "ERROR" });
+    res.json({ success: false, message: "ERROR" });
   }
 };
 
-//all SkinType list
-const listST = async (req,res) =>{
+// List all SkinType items
+const listST = async (req, res) => {
   try {
-      const SkinType = await SkinTypeModel.find({});
-      res.json({success: true , data:SkinType})
+    const SkinType = await SkinTypeModel.find({});
+    res.json({ success: true, data: SkinType });
   } catch (error) {
-      console.log(error);
-      res.json({ success: false, massage: "ERROR" });
+    console.log(error);
+    res.json({ success: false, message: "ERROR" });
   }
-}
+};
 
-//remove SkinType
-const removeST = async (req,res) =>{
+// Remove SkinType item
+const removeST = async (req, res) => {
   try {
+    const SkinType = await SkinTypeModel.findById(req.body.id);
 
-      const SkinType = await SkinTypeModel.findById(req.body.id);
-      fs.unlink(`uploads/${SkinType.image}`,()=>{});
-
+    if (SkinType) {
+      if (SkinType.image) {
+        // fs.unlink(uploads/${SkinType.image}, () => {});
+      }
       await SkinTypeModel.findByIdAndDelete(req.body.id);
-      res.json({success: true, massage: "Skin Type removed"});
-
+      res.json({ success: true, message: "Skin Type removed" });
+    } else {
+      res.json({ success: false, message: "Skin Type not found" });
+    }
   } catch (error) {
-
-      console.log(error);
-      res.json({ success: false, massage: "ERROR" });
-
+    console.log(error);
+    res.json({ success: false, message: "ERROR" });
   }
-}
+};
 
-export { addST , listST , removeST};
+export { addST, listST, removeST };
