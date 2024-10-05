@@ -4,6 +4,7 @@ import './SkinTypeRoutine.css';
 
 const SkinRoutine = () => {
   const [selectedRoutine, setSelectedRoutine] = useState('Morning');
+  const [skinType, setSkinType] = useState('Oily');  // Example: You can dynamically set this based on user selection/input
   const [routineData, setRoutineData] = useState([]);
   const [activeStep, setActiveStep] = useState(null);
 
@@ -25,7 +26,11 @@ const SkinRoutine = () => {
     setActiveStep(activeStep === index ? null : index);
   };
 
-  const filteredRoutine = routineData.filter(routine => routine.period.toLowerCase() === selectedRoutine.toLowerCase());
+  // Filter routine based on selected skinType and period
+  const filteredRoutine = routineData.filter(routine => 
+    routine.skinType.toLowerCase() === skinType.toLowerCase() &&
+    routine.period.toLowerCase() === selectedRoutine.toLowerCase()
+  );
 
   return (
     <div className="routine-container">
@@ -55,13 +60,13 @@ const SkinRoutine = () => {
         {filteredRoutine.map((item, index) => (
           <div key={index} className="routine-step">
             <div className="routine-step-header" onClick={() => handleToggle(index)}>
-              <h3>{index + 1}. {item.stage}</h3>
+              <h3>{index + 1}. {item[`stage${index + 1}`]}</h3>
               <span>{activeStep === index ? '-' : '+'}</span>
             </div>
             {activeStep === index && (
               <div className="routine-step-details">
-                <p><strong>Product:</strong> {item.product}</p>
-                <p><strong>Suggestion:</strong> {item.suggestion}</p>
+                <p><strong>Product:</strong> {item[`S${index + 1}product`]}</p>
+                <p><strong>Suggestion:</strong> {item[`S${index + 1}suggestion`]}</p>
               </div>
             )}
           </div>
