@@ -7,7 +7,9 @@ const addSP = async (req, res) => {
   //let image_filename = `${req.file.filename}`;
 
   const SkinProblem = new SkinProblemModel({
-    stage1: req.body.stage1,
+    ProblemDescription: req.body.ProblemDescription,
+    Solution: req.body.Solution,
+    SkinProblem: req.body.SkinProblem,
   });
   try {
     await SkinProblem.save();
