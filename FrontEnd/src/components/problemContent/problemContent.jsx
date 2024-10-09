@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./problemContent.css";
 
-const ProblemContent = () => {
+const ProblemContent = ({ category }) => {
   const [problemData, setProblemData] = useState([]);
   const [selectedProblem, setSelectedProblem] = useState(null); // Store selected problem
   const [showStages, setShowStages] = useState({
@@ -26,9 +26,17 @@ const ProblemContent = () => {
     fetchProblemData();
   }, []);
 
-  const handleProblemSelect = (problem) => {
-    setSelectedProblem(problem); // Set selected problem when user clicks
-  };
+  // When category changes, find and set the selected problem
+  useEffect(() => {
+    if (category !== "All") {
+      const foundProblem = problemData.find(
+        (item) => item.SkinProblem === category
+      );
+      setSelectedProblem(foundProblem || null); // Set selected problem based on category
+    } else {
+      setSelectedProblem(null); // Reset when "All" is selected
+    }
+  }, [category, problemData]);
 
   const toggleStage = (stage) => {
     setShowStages((prev) => ({
@@ -39,32 +47,8 @@ const ProblemContent = () => {
 
   return (
     <div className="problem-container">
-      <h2>Discover Your Skin Problem</h2>
-      <p>
-        Select a skin problem type to learn more about the issue and find the
-        best solutions.
-      </p>
-
-      {/* Problem List */}
-      <div className="problem-list">
-        {problemData.map((item, index) => (
-          <div
-            key={index}
-            className={`problem-item ${
-              selectedProblem &&
-              selectedProblem.SkinProblem === item.SkinProblem
-                ? "active"
-                : ""
-            }`}
-            onClick={() => handleProblemSelect(item)}
-          >
-            <h3>{item.SkinProblem}</h3> {/* Use SkinProblem from backend */}
-          </div>
-        ))}
-      </div>
-
       {/* Display Problem Description and Solution if a problem is selected */}
-      {selectedProblem && (
+      {selectedProblem ? (
         <div className="problem-details">
           {/* Problem Description Box */}
           <div className="routine-stage">
@@ -78,7 +62,7 @@ const ProblemContent = () => {
             {showStages.description && (
               <div className="routine-step-details">
                 <p>{selectedProblem.ProblemDescription}</p>{" "}
-                {/* Use ProblemDescription from backend */}
+                {/* Display ProblemDescription */}
               </div>
             )}
           </div>
@@ -94,12 +78,13 @@ const ProblemContent = () => {
             </div>
             {showStages.solution && (
               <div className="routine-step-details">
-                <p>{selectedProblem.Solution}</p>{" "}
-                {/* Use Solution from backend */}
+                <p>{selectedProblem.Solution}</p> {/* Display Solution */}
               </div>
             )}
           </div>
         </div>
+      ) : (
+        <p>Select a skin problem to see the details.</p>
       )}
     </div>
   );
