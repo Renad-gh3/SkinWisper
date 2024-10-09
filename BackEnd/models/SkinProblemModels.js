@@ -8,6 +8,6 @@ const SkinProblemSchema = new mongoose.Schema({
 });
 
 const SkinProblemModel =
-  mongoose.models.SkinType || mongoose.model("SkinType", SkinProblemSchema);
+  mongoose.models.SkinProblem || mongoose.model("SkinProblem", SkinProblemSchema);
 
 export default SkinProblemModel;
