@@ -1,0 +1,88 @@
+/* Main Container */
+.menu_problem {
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f5f5; /* Light background color */
+}
+
+/* Title Styling */
+.menu_problem h1 {
+    font-size: 2.5rem;
+    color: #333;  
+    font-family: 'Montserrat', sans-serif;  
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Subtitle Styling */
+.explore-menu-text {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #555; 
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Menu List Container - Centered Single Row */
+.explore-menu_problem {
+    display: flex;
+    justify-content: center; /* Center the items in one row */
+    align-items: center;
+    gap: 40px; /* Space between each item */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    max-width: 1200px; 
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+/* List Item Styling */
+.explore-menu_problem-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 150px; /* Control width to match the screenshot */
+}
+
+.explore-menu_problem-item:hover {
+    transform: scale(1.05); 
+}
+
+/* Circular Image Styling */
+.circular-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-image:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); 
+}
+
+/* Active State Styling */
+.circular-image.active {
+    border: 3px solid #4CAF50;
+    padding: 4px;
+}
+
+/* Problem Name Styling */
+.menu-item-name {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333; 
+    font-family: 'Lora', serif; 
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-menu_problem {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 20px;
+    }
+}
