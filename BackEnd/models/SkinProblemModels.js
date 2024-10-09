@@ -2,7 +2,9 @@ import mongoose from "mongoose";
 
 // Updated Schema
 const SkinProblemSchema = new mongoose.Schema({
-  stage1: { type: String, required: true },
+  ProblemDescription: { type: String, required: true },
+  Solution: { type: String, required: true },
+  SkinProblem: { type: String, required: true },
 });
 
 const SkinProblemModel =
