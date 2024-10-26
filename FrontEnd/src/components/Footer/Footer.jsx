@@ -6,7 +6,7 @@ import MadeInSaudiIcon from "../../assets/saudi.png";  // Import "Made in Saudi"
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer id="footer" className="footer">
             <div className="footer-container">
                 {/* About Us Section */}
                 <div className="footer-about">

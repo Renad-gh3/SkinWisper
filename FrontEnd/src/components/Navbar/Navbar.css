@@ -3,9 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    z-index: 1000;
 }
 .logo{
     width: 20%;
+    cursor: pointer;
 }
 .navbar-menu{
     display: flex;
@@ -13,9 +18,8 @@
     gap: 25px;
     color: #5b9c3d;
     font-size: 18px;
-    flex-grow: 1;
+    flex: 1;
     justify-content: center;
-    margin-left: 30px;
 }
 .navbar-menu li{
     position: relative;
@@ -61,4 +65,49 @@
     border-radius: 5px;
     top: -8px;
     right: -8px;
+}
+
+@media (max-width: 1050px){
+    .navbar.logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+@media (max-width: 900px){
+    .navbar.logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 25px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 750px){
+    
+    .navbar-menu{
+        display: none;
+    }
+    
 }
