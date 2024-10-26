@@ -1,0 +1,78 @@
+.contact-us-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contact-us-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-us-description {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .about-us-container {
+    background-color: #5b9c3d;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+
+  .about-us-title {
+    font-size: 2rem;
+    color: white;
+    margin: 20px 0;
+  }
+  
+  .about-us-description {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #5b9c3d;
+    border-radius: 8px;
+  }
+  
+  .social-media-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .social-media-name {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .footer-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-link {
+    cursor: pointer;
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin: 0 20px; /* Space between links */
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
