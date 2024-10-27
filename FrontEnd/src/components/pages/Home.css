@@ -1,3 +1,4 @@
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -43,7 +44,21 @@ body {
   grid-row: 2; /* Bottom row */
 }
 
-img {
-  width: 100%; /* Full width of the box */
-  height: auto; /* Maintain aspect ratio */
+p{height: 15%;}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.quick-select {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+
