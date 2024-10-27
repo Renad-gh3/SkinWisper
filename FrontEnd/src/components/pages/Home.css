@@ -10,11 +10,13 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .box {
-  flex: 1 1 200px;
+  display: flex;
+  align-items: center; /* Centering the content vertically */
+  justify-content: center; /* Centering the content horizontally */
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 15px;
   background-color: #5b9c3d;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 45%;
@@ -32,6 +34,7 @@ body {
   width: 50%;
   float: right;
 }
+
 .box-3 {
   flex: 1 1 200px;
   border: 1px solid #ccc;
