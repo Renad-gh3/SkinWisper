@@ -1,12 +1,9 @@
-
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
 }
-
-
 
 .box-container {
   display: block;
@@ -22,9 +19,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 45%;
   float: left;
-  height:969px;
+  height: 969px;
 }
-
 
 .box-1 {
   flex: 1 1 200px;
@@ -35,8 +31,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 50%;
   float: right;
-
-
 }
 .box-3 {
   flex: 1 1 200px;
@@ -47,11 +41,11 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 50%;
   float: right;
-
-
 }
 
-p{height: 15%;}
+p {
+  height: 15%;
+}
 
 .homepage-container {
   display: flex;
@@ -66,6 +60,3 @@ p{height: 15%;}
 footer {
   margin-top: auto;
 }
-
-
-
