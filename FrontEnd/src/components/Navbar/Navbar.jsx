@@ -16,7 +16,7 @@ const Navbar = ({activeSection, setShowLogin}) => {
       <img src={assets.logo} alt="" className="logo" />
       <ul className="navbar-menu">
         <li><NavLink to= "/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
-        <li><NavLink to="/menu" className={({ isActive }) => (isActive ? "active" : "")}>Our Shop</NavLink></li>
+        <li><NavLink to="/product" className={({ isActive }) => (isActive ? "active" : "")}>Our Shop</NavLink></li>
         <li><NavLink to="/fullskintype" className={({ isActive }) => (isActive ? "active" : "")}>Skin Type</NavLink></li>
         <li><NavLink to="/contact-us" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink></li>
       </ul>

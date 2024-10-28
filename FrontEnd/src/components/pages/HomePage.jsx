@@ -17,9 +17,9 @@ const HomePage = () => {
           </div>
 
           <div className="box-1">
-            <a href=''>
+            <Link to="/product">
               <img src={Box2} width="85%" alt="Feature Box 2" />
-            </a>
+            </Link>
           </div>
 
           <div className="box-3">
