@@ -1,6 +1,4 @@
-// TestHeader.js
 
-// TestHeader.js
 import React from 'react';
 import './TestHeader.css';
 import headerImage from '../../assets/problemHeader.png';
