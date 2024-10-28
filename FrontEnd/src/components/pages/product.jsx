@@ -14,21 +14,21 @@ const Product = ({ id, name, price, description, image }) => {
             <div className="product-item-img-container">
                 <img className='product-item-image' src={image} alt={name} />
                 {!cartItems[id] ? (
-                    <img 
-                        className='add' 
+                    <img
+                        className='add'
                         onClick={() => addToCart(id)} 
-                        src={addIcon} 
-                        alt="Add to cart" 
+                        src={addIcon}
+                        alt="Add to cart"
                     />
                 ) : (
                     <div className='item-counter'>
-                        <img 
+                        <img
                             onClick={() => RemoveFromCart(id)} 
-                            src={removeIcon} 
-                            alt="Remove from cart" 
+                            src={removeIcon}
+                            alt="Remove from cart"
                         />
                         <p>{cartItems[id]}</p>
-                        <img 
+                        <img
                             onClick={() => addToCart(id)} 
                             src={add_green} 
                             alt="Add more" 

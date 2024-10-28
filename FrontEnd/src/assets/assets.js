@@ -74,16 +74,18 @@ export const assets = {
 }
 
 export const skincareMenu = [
-    { menu_name:"Face wash",menu_image: FaceWash },
+    { menu_name:"Night Cream",menu_image: image_10 },
     {menu_name:"serum", menu_image: serum },
     { menu_name:"sunscreen",menu_image: sunscreen },
+    { menu_name:"Toner",menu_image: image_3 },
+    { menu_name:"Cleanser",menu_image: image_4 },
     { menu_name:"moisturizing cream",menu_image: moisturizingCream }
 ];
 
 
 export const List = [
     {
-        _id: "1",
+        id: "1",
         name: "The Ordinary Glycolic Acid",
         description: "This AHA toner contains 7% glycolic acid for gentle exfoliation and aloe vera and Tasmanian pepperberry extract for soothing and skin-rejuvenating effects.",
         period: "evening",
@@ -95,7 +97,8 @@ export const List = [
 
     },
     {
-        _id: "2",
+
+        id: "2",
         name: "1004 Skin Centella Toner",
         description: "A gentle PHA toner that soothes, exfoliates, hydrates and brightens in equal measure.",
         image :image_2,
@@ -106,7 +109,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "3",
+
+        id: "3",
         name: "Anua Peach 77 Niacin Essence Toner",
         description: "This hydrating toner is formulated with 77% peach extract to leave skin looking flawless with a glowy finish.",
         image :image_3,
@@ -117,7 +121,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "4",
+
+        id: "4",
         name: "1004 Skin Centella Cleanser",
         image :image_4,
         description: "Formulated with baking soda for deep cleansing and 84% Madagascan cica extract for soothing and hydrating benefits.",
@@ -128,7 +133,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "5",
+
+        id: "5",
         name: "Beauty of Jonson Cleanser",
         image :image_5,
         description: "Infused with plum water, mung bean seed extract and nourishing herbal ingredients.",
@@ -139,7 +145,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "6",
+
+        id: "6",
         name: "The Face Shop Cleanser",
         image :image_6,
         description: "Gentle cleanser suitable for normal skin.",
@@ -150,7 +157,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "7",
+
+        id: "7",
         name: "InsTree Sun Gel",
         image :image_7,
         description: "Keep harmful UV rays at bay with this watery sun gel that contains eight types of hyaluronic acid to replenish moisture.",
@@ -161,7 +169,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "8",
+
+        id: "8",
         name: "Anua Sunscreen",
         image :image_8,
         description: "This sun cream uses chemical filters for SPF 50+ PA++++ protection with ingredients like houttuynia cordata extract and panthenol.",
@@ -172,7 +181,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "9",
+
+        id: "9",
         name: "Shiseido Sunscreen",
         image :image_9,
         description: "SPF 50 PA++++ sunscreen with a milky lotion texture, combines physical and chemical filters.",
@@ -183,7 +193,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "10",
+
+        id: "10",
         name: "AXIS_Y Night Renewal Set",
         image :image_10,
         description: "For overnight nourishment to rejuvenate dull skin, this duo works wonders.",
@@ -194,7 +205,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "11",
+
+        id: "11",
         name: "MISSHA Night Cream",
         image :image_11,
         description: "Combat signs of aging with MISSHA’s Time Revolution Night Repair Ampoule Cream 5X.",
@@ -205,7 +217,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "12",
+
+        id: "12",
         name: "By WishTrend Night Cream",
         image :image_12,
         description: "This nourishing night cream is perfect for anti-aging beginners.",
@@ -216,7 +229,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "13",
+
+        id: "13",
         name: "MediCube Jelly Cream",
         image :image_13,
         description: "Reverse signs of aging with this gel cream containing collagen and elastin for skin elasticity and wrinkle reduction.",
@@ -227,7 +241,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "14",
+
+        id: "14",
         name: "Cosrx Intensive Cream",
         image :image_14,
         description: "Superbly hydrating cream with 3,000ppm sodium hyaluronate for deep moisture and a stronger moisture barrier.",
@@ -238,7 +253,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "15",
+
+        id: "15",
         name: "Mixsoon Bean Cream",
         image :image_15,
         description: "Highly moisturizing cream with fermented soybean extract for balanced oil-moisture levels.",
@@ -249,7 +265,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "16",
+
+        id: "16",
         name: "Anua Niacinamide 10% + TXA 4% Serum",
         image :image_16,
         description: "Formulated with 10% niacinamide and 4% tranexamic acid to fade dark spots and acne scars.",
@@ -260,7 +277,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "17",
+
+        id: "17",
         name: "MediCube Triple Collagen Serum 4.0",
         image :image_17,
         description: "This serum contains Triple Collagen Complex for skin suppleness and a glowing finish.",
@@ -271,7 +289,8 @@ export const List = [
         quantity: 5,
     },
     {
-        _id: "18",
+
+        id: "18",
         name: "APLB Retinol Vitamin C Vitamin E Serum",
         image :image_18,
         description: "Contains 21.6% RETINOL VITA CEN™ with retinol, Vitamin C, and Vitamin E to combat aging, brighten skin, and provide moisturizing and soothing benefits.",

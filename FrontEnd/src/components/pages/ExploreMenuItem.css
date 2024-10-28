@@ -1,18 +1,37 @@
-/* Main Container */
-.menu_problem {
-  text-align: center;
-  padding: 50px;
-  background-color: #f5f5f5; /* Light background color */
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Title Styling */
-.menu_problem h1 {
-  font-size: 2.5rem;
-  color: #333;  
-  font-family: 'Montserrat', sans-serif;  
-  margin-bottom: 10px;
-  font-weight: bold;
+
+
+
+.explore-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  overflow-x: scroll;
 }
+.explore-menu-list::-webkit-scrollbar{
+display: none;
+
+}
+
+
+
+
+.explore-menu-list-item .active {
+border : 4px solid tomato;
+padding: 2px;
+
+}
+
+
+
 
 /* Subtitle Styling */
 .explore-menu-text {
@@ -23,8 +42,9 @@
 }
 
 /* Menu List Container - Centered Single Row */
-.explore-menu_problem {
-  display: flex;
+
+.explore-menu_list {
+  display: contents;
   justify-content: center; /* Center the items in one row */
   align-items: center;
   gap: 40px; /* Space between each item */
@@ -35,16 +55,19 @@
 }
 
 /* List Item Styling */
-.explore-menu_problem-item {
+
+.explore-menu-list-item {
   display: flex;
   flex-direction: column; /* Stack image and text vertically */
-  align-items: center;
+   align-items:center;
   text-align: center;
   transition: transform 0.3s ease-in-out;
   width: 150px; /* Control width to match the screenshot */
+
 }
 
-.explore-menu_problem-item:hover {
+
+.explore-menu-list:hover {
   transform: scale(1.05); 
 }
 
@@ -69,6 +92,7 @@
   padding: 4px;
 }
 
+
 /* Problem Name Styling */
 .menu-item-name {
   margin-top: 10px;
@@ -77,12 +101,3 @@
   color: #333; 
   font-family: 'Lora', serif; 
   text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .explore-menu_problem {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      gap: 20px;
-  }
-}

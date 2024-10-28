@@ -1,23 +1,18 @@
-import React, { useContext } from 'react'; // Import useContext
-import Navbar from '../Navbar/Navbar';
+import React, { useContext } from 'react';
 import ExploreMenuItem from '../pages/ExploreMenuItem';
-import Product from '../pages/product';
+import Product from './product';
 import { StoreContext } from './StoreContext';
 import './Display.css';
-import Footer from '../Footer/Footer';
+
 const Display = ({ category }) => {
     const { List = [] } = useContext(StoreContext);
+
     return (
         <section>
-            <div className='navbar'>
-                <Navbar />
-            </div>
             <div className='ExploreMenu'>
                 <ExploreMenuItem />
             </div>
 
-
-            <p></p>
             <div className="display-container">
                 {List.map((item) => (
                     <Product
@@ -30,10 +25,6 @@ const Display = ({ category }) => {
                     />
                 ))}
             </div>
-            <div className='Footer'>
-                <Footer />
-            </div>
-            
         </section>
     );
 };
