@@ -1,9 +1,9 @@
-import React from 'react'
-import './Home.css';
+import React from "react";
+import "./Home.css";
 import Box1 from "../../assets/Box1.png";
 import Box2 from "../../assets/Box2.png";
 import Box3 from "../../assets/Box3.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -31,7 +31,6 @@ const HomePage = () => {
       </section>
     </div>
   );
-}
+};
 
 export default HomePage;
-

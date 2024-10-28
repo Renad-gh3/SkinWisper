@@ -1,85 +1,43 @@
 .problem-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-    max-width: 800px;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.problem-container h2 {
-    color: #4CAF50;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-}
-
-.problem-container p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Problem List Container */
 .problem-list {
-    text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-/* Each Problem Item */
 .problem-item {
-    margin-top: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.problem-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.problem-item.active {
+  background-color: #007bff;
+  color: white;
 }
 
-/* Problem Header */
-.problem-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: #fff;
-    font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    transition: background-color 0.3s;
+.routine-stage {
+  margin: 20px 0;
 }
 
-.problem-header:hover {
-    background-color: #388E3C;
+.routine-step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-/* Plus/Minus Icon */
-.problem-header span {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Problem Details */
-.problem-details {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-}
-
-.problem-details h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    margin-top: 15px;
-    color: #333;
-}
-
-.problem-details p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
+.routine-step-details {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
 }

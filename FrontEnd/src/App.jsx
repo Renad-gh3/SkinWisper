@@ -10,7 +10,8 @@ import ContactUs from './components/pages/ContactUs.jsx';
 import LoginPopUp from './components/LoginPopUp/LoginPopUp.jsx';
 import Display from './components/pages/Display.jsx'; // Import Display correctly
 import StoreContextProvider from './components/pages/StoreContext.jsx';
-import Product from './components/pages/product.jsx';
+//import prodect from './components/pages/product.jsx';
+//import ExploreMenuItem from './components/pages/ExploreMenuItem.jsx';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -23,16 +24,20 @@ const App = () => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
 
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
         setActiveSection(section.id);
       }
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   
   const [showLogin, setShowLogin] = useState(false);
 
@@ -57,3 +62,4 @@ const App = () => {
 };
 
 export default App;
+

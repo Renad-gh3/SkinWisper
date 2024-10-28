@@ -1,21 +1,18 @@
-// ProblemPage.js
-import { useState } from 'react'
-import TestHeader from '../problemPage/TestHeader.jsx'
-import ExploremenuOfproblem from '../ExploremenuOfproblem/ExploremeuOfproblem.jsx'
-import ProblemContent from '../problemContent/problemContent.jsx'
+import { useState } from "react";
+import TestHeader from "../problemPage/TestHeader.jsx";
+import ExploremenuOfproblem from "../ExploremenuOfproblem/ExploremeuOfproblem.jsx";
+import ProblemContent from "../problemContent/problemContent.jsx";
 
 const ProblemPage = () => {
-  const[category,setCategory]=useState("All")
+  const [category, setCategory] = useState("All");
+
   return (
-    <div className='app' width='100%'>
+    <div className="app" width="100%">
       <TestHeader />
-      <ExploremenuOfproblem category={category}setCategory={setCategory}/>
-      < ProblemContent category={category} /> 
+      <ExploremenuOfproblem category={category} setCategory={setCategory} />
+      <ProblemContent category={category} />
     </div>
   );
 };
 
-export default ProblemPage
-
-
-
+export default ProblemPage;

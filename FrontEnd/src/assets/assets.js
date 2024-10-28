@@ -97,6 +97,7 @@ export const List = [
 
     },
     {
+
         id: "2",
         name: "1004 Skin Centella Toner",
         description: "A gentle PHA toner that soothes, exfoliates, hydrates and brightens in equal measure.",
@@ -108,6 +109,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "3",
         name: "Anua Peach 77 Niacin Essence Toner",
         description: "This hydrating toner is formulated with 77% peach extract to leave skin looking flawless with a glowy finish.",
@@ -119,6 +121,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "4",
         name: "1004 Skin Centella Cleanser",
         image :image_4,
@@ -130,6 +133,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "5",
         name: "Beauty of Jonson Cleanser",
         image :image_5,
@@ -141,6 +145,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "6",
         name: "The Face Shop Cleanser",
         image :image_6,
@@ -152,6 +157,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "7",
         name: "InsTree Sun Gel",
         image :image_7,
@@ -163,6 +169,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "8",
         name: "Anua Sunscreen",
         image :image_8,
@@ -174,6 +181,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "9",
         name: "Shiseido Sunscreen",
         image :image_9,
@@ -185,6 +193,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "10",
         name: "AXIS_Y Night Renewal Set",
         image :image_10,
@@ -196,6 +205,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "11",
         name: "MISSHA Night Cream",
         image :image_11,
@@ -207,6 +217,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "12",
         name: "By WishTrend Night Cream",
         image :image_12,
@@ -218,6 +229,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "13",
         name: "MediCube Jelly Cream",
         image :image_13,
@@ -229,6 +241,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "14",
         name: "Cosrx Intensive Cream",
         image :image_14,
@@ -240,6 +253,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "15",
         name: "Mixsoon Bean Cream",
         image :image_15,
@@ -251,6 +265,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "16",
         name: "Anua Niacinamide 10% + TXA 4% Serum",
         image :image_16,
@@ -262,6 +277,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "17",
         name: "MediCube Triple Collagen Serum 4.0",
         image :image_17,
@@ -273,6 +289,7 @@ export const List = [
         quantity: 5,
     },
     {
+
         id: "18",
         name: "APLB Retinol Vitamin C Vitamin E Serum",
         image :image_18,

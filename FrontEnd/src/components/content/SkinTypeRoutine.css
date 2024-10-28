@@ -1,101 +1,105 @@
 .routine-container {
-    text-align: left;
-    padding: 30px;
-    font-family: 'Roboto', sans-serif;
-    max-width: 100%;
-    margin: 0 auto;
-    background-color: #fff;
-    box-sizing: border-box;
+  text-align: left;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-sizing: border-box;
 }
+
 .routine-container h2,
 .routine-container p {
-    text-align: center; /* Center just the header and paragraph */
+  text-align: center; /* Center just the header and paragraph */
 }
+
 .routine-container h2 {
-    font-size: 1.8rem;
-    color: #2E3A59;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #2e3a59;
+  margin-bottom: 10px;
 }
+
 .routine-toggle-container {
-    text-align: center; /* Center the Morning/Evening buttons */
-    margin-bottom: 20px;
+  text-align: center; /* Center the Morning/Evening buttons */
+  margin-bottom: 20px;
 }
+
 .routine-container p {
-    font-size: 1rem;
-    color: #5A6473;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  color: #5a6473;
+  margin-bottom: 20px;
 }
 
 /* Toggle Button Styling */
 .routine-toggle {
-    display: inline-flex;
-    border: 1px solid #5b9c3d;
-    border-radius: 25px;
-    overflow: hidden;
-    margin-bottom: 20px;
+  display: inline-flex;
+  border: 1px solid #5b9c3d;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .routine-toggle button {
-    padding: 10px 25px;
-    border: none;
-    background: none;
-    color: #5b9c3d;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+  padding: 10px 25px;
+  border: none;
+  background: none;
+  color: #5b9c3d;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .routine-toggle button.active {
-    background-color: #5b9c3d;
-    color: white;
+  background-color: #5b9c3d;
+  color: white;
 }
 
 .routine-toggle button:hover {
-    background-color: #4a8031;
-    color: white;
+  background-color: #4a8031;
+  color: white;
 }
 
 /* Routine Step Styling */
 .routine-steps {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-.routine-step {
-    border-bottom: 1px solid #D9D9D9;
-    padding: 10px 0;
+.routine-stage {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 0;
 }
 
 .routine-step-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .routine-step-header h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #2E3A59;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2e3a59;
 }
 
 .routine-step-header span {
-    font-size: 1.5rem;
-    color: #2E3A59;
+  font-size: 1.5rem;
+  color: #2e3a59;
 }
 
 .routine-step-details {
-    padding: 10px 0;
-    font-size: 1rem;
-    color: #5A6473;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #5a6473;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .routine-toggle button {
-        padding: 8px 15px;
-    }
+  .routine-toggle button {
+    padding: 8px 15px;
+  }
 
-    .routine-step-header h3 {
-        font-size: 1rem;
-    }
+  .routine-step-header h3 {
+    font-size: 1rem;
+  }
 }
