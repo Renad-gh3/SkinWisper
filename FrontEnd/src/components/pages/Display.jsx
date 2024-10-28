@@ -3,6 +3,8 @@ import Navbar from '../Navbar/Navbar';
 import ExploreMenuItem from '../pages/ExploreMenuItem';
 import Product from '../pages/product';
 import { StoreContext } from './StoreContext';
+import './Display.css';
+import Footer from '../Footer/Footer';
 const Display = ({ category }) => {
     const { List = [] } = useContext(StoreContext);
     return (
@@ -14,7 +16,7 @@ const Display = ({ category }) => {
                 <ExploreMenuItem />
             </div>
 
-            <h1>Skincare Products</h1>
+
             <p></p>
             <div className="display-container">
                 {List.map((item) => (
@@ -28,6 +30,10 @@ const Display = ({ category }) => {
                     />
                 ))}
             </div>
+            <div className='Footer'>
+                <Footer />
+            </div>
+            
         </section>
     );
 };

@@ -50,8 +50,7 @@ font-weight: 500;
 
 }
 .product-item-name-rating img{
- width: 70px;
-
+ width: 70px ;
 
 }
 
@@ -60,7 +59,7 @@ font-weight: 500;
   font-size: 22px;
   font-weight: 500;
   color: tomato;
-  margin:10px 0px;
+  margin:28px 0px;
 }
 
 .product-item-description {
