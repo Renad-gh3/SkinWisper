@@ -22,7 +22,7 @@ const HomePage = () => {
 
           {/* Box 2 (not linked) */}
           <div className="box-1">
-            <a href=''>
+            <a href='/product'>
               <img src={Box2} width="85%" alt="Feature Box 2" />
             </a>
           </div>
