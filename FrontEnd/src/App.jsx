@@ -12,7 +12,7 @@ import Display from './components/pages/Display.jsx'; // Import Display correctl
 import StoreContextProvider from './components/pages/StoreContext.jsx';
 //import prodect from './components/pages/product.jsx';
 //import ExploreMenuItem from './components/pages/ExploreMenuItem.jsx';
-
+import Cart from './components/pages/Cart.jsx'
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
 
@@ -53,6 +53,7 @@ const App = () => {
             <Route path='/product' element={<Display />} />
             <Route path='/problemPage' element={<ProblemPage />} /> 
             <Route path='/contact-us' element={<ContactUs />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
           <Footer id="footer" /> 
         </div>

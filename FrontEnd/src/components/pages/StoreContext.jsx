@@ -30,13 +30,25 @@ const StoreContextProvider = (props) => {
             return updatedItems;
         });
     };
+    const getTotalCartAmount=()=>{
+        let totalAmount=0;
+        for(const item in cartItems){
+            if(cartItems[item]>0){
+              let itemInfo =List.find((product)=>product.id===item);
+              totalAmount+=itemInfo.price*cartItems[item];
+            }
+            
 
+        }
+        return totalAmount;
+    }
     // Context value containing the product list, cart items, and cart functions
     const contextValue = {
         List,
         cartItems,
         addToCart,
         RemoveFromCart,
+        getTotalCartAmount
     };
 
     return (
