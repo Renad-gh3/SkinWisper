@@ -7,8 +7,8 @@ import React, { useContext } from 'react';
 import { StoreContext } from './StoreContext';
 
 const Product = ({ id, name, price, description, image }) => {
-    const { cartItems, addToCart, RemoveFromCart } = useContext(StoreContext);
-   //<img className='product-item-image' src={"http://localhost:5000/images/"+image} alt={name} />
+    const { cartItems, addToCart, RemoveFromCart, url} = useContext(StoreContext);
+   //<img className='product-item-image' src={"http://localhost:5000/images/"+image} alt={name} />  url+"/images/"+
     return (
         <div className='product-item'>
             <div className="product-item-img-container">

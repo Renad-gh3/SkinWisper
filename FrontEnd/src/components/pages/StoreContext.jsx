@@ -14,12 +14,18 @@ const StoreContextProvider = (props) => {
     const[token, setToken] = useState("");
     //const [List , setList] = useState([]);
 
+
     // Function to add an item to the cart
-    const addToCart = (id) => {
-        setCartItems((prevItems) => ({
-            ...prevItems,
-            [id]: (prevItems[id] || 0) + 1,
-        }));
+    const addToCart = async (id) => {
+        if(!cartItems[id]){
+            setCartItems((prevItems) => ({...prevItems, [id]: 1}))
+        }
+        else{
+            setCartItems((prevItems) => ({...prevItems, [id]: prevItems[id] + 1}))
+        }
+        if(token){
+            await axios.post(url+"/api/cart/add",{id}, {headers:{token}})
+        }
     };
 
     // Function to remove an item from the cart
@@ -48,10 +54,10 @@ const StoreContextProvider = (props) => {
     }
 
 
-    /*const fetchProductList = async () =>{
+    const fetchProductList = async () =>{
         const response = await axios.get(url+"/api/Products/list");
         setList(response.data.data);
-    }
+    };
 
     useEffect(()=>{
         async function loadData(){
@@ -61,10 +67,17 @@ const StoreContextProvider = (props) => {
             }
         }
         loadData();
-    },[])*/
+    },[])
 
 
     // Context value containing the product list, cart items, and cart functions
+
+    /*useEffect(()=>{
+        if(localStorage,getItem("token")){
+            setToken(localStorage,getItem("token"))
+        }
+    },[]);*/
+
     const contextValue = {
         List,
         cartItems,
