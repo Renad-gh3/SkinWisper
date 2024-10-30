@@ -32,7 +32,7 @@ const Display = ({ category }) => {
 export default Display;*/
 import React, { useContext, useState } from 'react';
 import ExploreMenuItem from '../pages/ExploreMenuItem';
-import Product from './Product'; // Ensure the import is correct
+import Product from './product';
 import { StoreContext } from './StoreContext';
 import './Display.css';
 

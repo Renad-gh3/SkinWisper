@@ -66,8 +66,7 @@ import './Cart.css';
 import { StoreContext } from './StoreContext';
 
 const Cart = () => {
-  const { cartItems, List, RemoveFromCart, getTotalCartAmount } = useContext(StoreContext);
-
+  const { cartItems, List, RemoveFromCart, getTotalCartAmount, } = useContext(StoreContext);
   return (
     <div className='cart'>
       <div className="cart-item">
@@ -83,7 +82,7 @@ const Cart = () => {
         {List && List.length > 0 ? (
           List.filter((item) => cartItems[item.id] > 0).map((item) => (
             <div key={item.id} className='cart-items-item'>
-              <img src={item.image} alt={item.name} />
+              <img src={"http://localhost:5000/images/"+item.image} alt={item.name} />
               <p>{item.name}</p>
               <p>${item.price}</p>
               <p>{cartItems[item.id]}</p>
