@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect} from "react";
 import axios from "axios";
-//import {List} from '../../assets/assets';
+import {List} from '../../assets/assets';
 
 
 // Create the context
@@ -12,7 +12,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const url = "http://localhost:5000";
     const[token, setToken] = useState("");
-    const [List , setList] = useState([]);
+    //const [List , setList] = useState([]);
 
     // Function to add an item to the cart
     const addToCart = (id) => {
@@ -48,7 +48,7 @@ const StoreContextProvider = (props) => {
     }
 
 
-    const fetchProductList = async () =>{
+    /*const fetchProductList = async () =>{
         const response = await axios.get(url+"/api/Products/list");
         setList(response.data.data);
     }
@@ -61,7 +61,7 @@ const StoreContextProvider = (props) => {
             }
         }
         loadData();
-    },[])
+    },[])*/
 
 
     // Context value containing the product list, cart items, and cart functions
@@ -71,7 +71,9 @@ const StoreContextProvider = (props) => {
         addToCart,
         RemoveFromCart,
         getTotalCartAmount,
-        url
+        url,
+        token,
+        setToken
     };
 
     return (
