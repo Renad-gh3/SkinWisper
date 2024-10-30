@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { StoreContext } from '../pages/StoreContext';
-
+import {Link} from 'react-router-dom';
 
 const Navbar = ({activeSection, setShowLogin}) => {
 
@@ -15,7 +15,7 @@ const Navbar = ({activeSection, setShowLogin}) => {
 
   return (
     <div className= 'navbar'>
-     <img src={assets.logo} alt="" className="logo" />
+       <Link to="/" ><img src={assets.logo} alt="" className="logo" /></Link>
       <ul className="navbar-menu">
         <li><NavLink to= "/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
         <li><NavLink to="/product" className={({ isActive }) => (isActive ? "active" : "")}>Our Shop</NavLink></li>

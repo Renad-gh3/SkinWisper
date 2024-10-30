@@ -1,212 +1,118 @@
-/*.cart {
+
+.cart {
     margin-top: 100px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .cart-item-title {
     display: flex;
     justify-content: space-between;
-    color: grey;
-    font-size: max(1vw, 12px);
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #e4e2e2;
+    padding: 10px 0;
+}
+
+.cart-header, .cart-item-detail {
+    flex: 1;
+    text-align: center;
 }
 
 .cart-items-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
+    justify-content: space-between; /* Align items horizontally in a row */
+    align-items: center;
     margin: 10px 0;
-    color: black;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e4e2e2; /* Optional: to separate each row */
 }
 
 .cart-items-item img {
     width: 50px;
-}
-
-hr {
-    height: 1px;
-    background-color: #e2e2e2;
-    border: none;
-}
-
-.cross {
-    cursor: pointer;
-}
-/*
-.cart-bottom {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column; 
-    gap: 10px; 
-}
-
-.cart-total {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; 
-    padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.cart-total-details {
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    width: 100%; 
-    padding: 8px 0; 
-}
-
-.cart-total-details p {
-    margin: 0; 
-    flex: 1; 
-}
-
-hr {
-    width: 80%;
-    border: 1px solid #ddd;
-    margin: 5px auto;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-start; 
-    margin-top: 10px; 
-}   
-
-button {
-    padding: 15px 0px; 
-    background-color: #28a745; 
-    color: white;
-    border: none;
-    border-radius: 4px; 
-    cursor: pointer;
-    font-size: 14px; 
-    transition: background-color 0.3s; 
-    width: max(12vw, 200px);
-}
-
-button:hover {
-    background-color: #218838; 
-}*/
-.cart {
-    margin-top: 100px;
-   padding: 20px; 
-   background-color: #ffffff; /* White background for the cart */
-    border-radius: 10px; /* Rounded corners for a modern look */
-}
-
-.cart-item-title {
-    display: flex;
-    justify-content: space-around; /* Space between headers */
-    color: #555; /* Slightly darker gray for headers */
-    font-size: 16px; /* Increased font size for better readability */
-    font-weight: bold; /* Make headers bold */
-    text-align: center; /* Center header text */
-    border-bottom: 2px solid #e4e2e2; /* Bottom border for separation */
-    padding: 10px 0; /* Vertical padding for headers */
-}
-
-.cart-header {
-    flex: auto; /* Each header takes equal space */
-}
-
-.cart-items-item {
-    display: flex;
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center; /* Center vertically */
-    margin: 15px 0; /* Space between rows */
-    color: #333; /* Darker color for item text */
-    text-align: center; /* Center text for each item */
-    padding: 10px 0; /* Vertical padding for items */
-}
-
 .cart-item-detail {
-    flex: 1; /* Each detail takes equal space */
-}
-
-.cart-items-item img {
-    width: 50px; /* Fixed width for images */
-    border-radius: 5px; /* Rounded corners for images */
+    flex: 1;
+    text-align: center;
 }
 
 .cart-items-item p {
-    margin: 0; /* Remove default margin */
-    font-size: 14px; /* Font size for item details */
-}
-
-hr {
-    height: 1px;
-    background-color: #e2e2e2; /* Light gray for horizontal rule */
-    border: none;
-   /* margin: 10px 0; /* Space around horizontal rule */
+    margin: 0;
+    font-size: 14px;
 }
 
 .cross {
     cursor: pointer;
-    color: #d9534f; /* Red color for the remove option */
-    font-weight: bold; /* Bold for emphasis */
+    color: #d9534f;
+    font-weight: bold;
 }
 
 .cart-bottom {
-    margin-top: 30px; /* Space above the totals section */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange elements vertically */
-    gap: 20px; /* Space between elements */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .cart-totals {
-    border: 1px solid #e2e2e2; /* Light border for totals */
-    border-radius: 5px; /* Rounded corners */
-    padding: 20px; /* Padding for totals section */
-    background-color: #f9f9f9; /* Light background for totals */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cart-totals h2 {
-    font-size: 20px; /* Increased font size for heading */
-    margin-bottom: 15px; /* Space below heading */
-    color: #333; /* Darker color for headings */
-    text-align: center; /* Center the totals heading */
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
 }
 
 .cart-total-details {
-    display: flex; /* Flexbox for total details */
-    justify-content: space-between; /* Space between label and total */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 10px; /* Space between total rows */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .cart-total-details p {
-    margin: 0; /* Remove default margin */
-    font-size: 16px; /* Font size for text */
+    margin: 0;
+    font-size: 16px;
 }
 
 .cart-total-details b {
-    font-size: 16px; /* Font size for bold numbers */
-    font-weight: bold; /* Make numbers bold */
-    margin-left: 10px; /* Space between text and number */
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 .cart-totals-actions {
-    display: flex; /* Use flexbox for button container */
-    justify-content: center; /* Center the button */
-    margin-top: 10px; /* Space above the button */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .cart-totals-actions button {
-    padding: 15px 0; /* Button padding */
-    background-color: #28a745; /* Button color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    font-size: 16px; /* Font size for button */
-    transition: background-color 0.3s; /* Smooth transition for hover */
-    width: 100%; /* Full width button */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 15px 0;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cart-totals-actions button:hover {
-    background-color: #218838; /* Darker color on hover */
+    background-color: #218838;
 }
-
-
