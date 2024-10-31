@@ -12,7 +12,7 @@ const Product = ({ id, name, price, description, image }) => {
     return (
         <div className='product-item'>
             <div className="product-item-img-container">
-                <img className='product-item-image' src={image} alt={name} />
+                <img className='product-item-image' src={"http://localhost:5000/images/"+image} alt={name} />
                 {!cartItems[id] ? (
                     <img
                         className='add'

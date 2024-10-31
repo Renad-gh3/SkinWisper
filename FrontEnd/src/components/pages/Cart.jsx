@@ -93,7 +93,7 @@ const Cart = () => {
         List.filter((item) => cartItems[item.id] > 0).map((item) => (
           <div key={item.id} className='cart-items-item'>
             <div className='cart-item-detail'>
-              <img src={item.image} alt={item.name} />
+              <img src={"http://localhost:5000/images/"+item.image} alt={item.name} />
             </div>
             <div className='cart-item-detail'>
               <p>{item.name}</p>

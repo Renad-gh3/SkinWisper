@@ -12,21 +12,19 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const url = "http://localhost:5000";
     const[token, setToken] = useState("");
-    //const [List , setList] = useState([]);
+    const [List , setList] = useState([]);
 
 
     // Function to add an item to the cart
-    const addToCart = async (id) => {
-        if(!cartItems[id]){
-            setCartItems((prevItems) => ({...prevItems, [id]: 1}))
-        }
-        else{
-            setCartItems((prevItems) => ({...prevItems, [id]: prevItems[id] + 1}))
-        }
-        if(token){
-            await axios.post(url+"/api/cart/add",{id}, {headers:{token}})
-        }
+    
+    // Function to add an item to the cart
+    const addToCart = (id) => {
+        setCartItems((prevItems) => ({
+            ...prevItems,
+            [id]: (prevItems[id] || 0) + 1,
+        }));
     };
+
 
     // Function to remove an item from the cart
     const RemoveFromCart = (id) => {
@@ -40,18 +38,25 @@ const StoreContextProvider = (props) => {
             return updatedItems;
         });
     };
-    const getTotalCartAmount=()=>{
-        let totalAmount=0;
-        for(const item in cartItems){
-            if(cartItems[item]>0){
-              let itemInfo =List.find((product)=>product.id===item);
-              totalAmount+=itemInfo.price*cartItems[item];
-            }
-            
 
+    useEffect(() => {
+        console.log(cartItems);
+    },[cartItems])
+
+    const getTotalCartAmount = () => {
+        let totalAmount = 0;
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                // Assuming product IDs in `List` are stored in a lowercase `id` field
+                let itemInfo = List.find((product) => product.id === item);
+                if (itemInfo) {
+                    totalAmount += itemInfo.price * cartItems[item];
+                }
+            }
         }
         return totalAmount;
-    }
+    };
+    
 
 
     const fetchProductList = async () =>{
@@ -81,6 +86,7 @@ const StoreContextProvider = (props) => {
     const contextValue = {
         List,
         cartItems,
+        setCartItems,
         addToCart,
         RemoveFromCart,
         getTotalCartAmount,

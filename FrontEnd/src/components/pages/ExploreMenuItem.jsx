@@ -1,3 +1,4 @@
+import React from 'react'
 import './ExploreMenuItem.css';
 import { skincareMenu } from '../../assets/assets';
 
