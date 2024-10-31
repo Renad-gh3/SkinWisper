@@ -47,8 +47,7 @@ const StoreContextProvider = (props) => {
         let totalAmount = 0;
         for (const item in cartItems) {
             if (cartItems[item] > 0) {
-                // Assuming product IDs in `List` are stored in a lowercase `id` field
-                let itemInfo = List.find((product) => product.id === item);
+                let itemInfo = List.find((product) => product.id.toString() === item);
                 if (itemInfo) {
                     totalAmount += itemInfo.price * cartItems[item];
                 }
@@ -56,6 +55,7 @@ const StoreContextProvider = (props) => {
         }
         return totalAmount;
     };
+    
     
 
 
