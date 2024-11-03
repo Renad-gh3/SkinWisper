@@ -18,16 +18,19 @@ const StoreContextProvider = (props) => {
     // Function to add an item to the cart
     
     // Function to add an item to the cart
-    const addToCart = (id) => {
+    const addToCart = async (id) => {
         setCartItems((prevItems) => ({
             ...prevItems,
             [id]: (prevItems[id] || 0) + 1,
         }));
-    };
+        if(token){
+            await axios.post(url+"/api/cart/add", {id}, {headers:{token}})
+        }
+    }
 
 
     // Function to remove an item from the cart
-    const RemoveFromCart = (id) => {
+    const RemoveFromCart = async (id) => {
         setCartItems((prevItems) => {
             const updatedItems = { ...prevItems };
             if (updatedItems[id] > 1) {
@@ -37,6 +40,9 @@ const StoreContextProvider = (props) => {
             }
             return updatedItems;
         });
+        if(token){
+            await axios.post(url+"/api/cart/remove", {id}, {headers:{token}})
+        }
     };
 
     useEffect(() => {
@@ -77,11 +83,11 @@ const StoreContextProvider = (props) => {
 
     // Context value containing the product list, cart items, and cart functions
 
-    /*useEffect(()=>{
-        if(localStorage,getItem("token")){
-            setToken(localStorage,getItem("token"))
+    useEffect(()=>{
+        if(localStorage.getItem("token")){
+            setToken(localStorage.getItem("token"))
         }
-    },[]);*/
+    },[]);
 
     const contextValue = {
         List,
