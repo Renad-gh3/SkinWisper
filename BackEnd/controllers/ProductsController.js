@@ -9,7 +9,7 @@ const addProduct = async (req, res) => {
     let image_filename = `${req.file.filename}`;
 
     const Product = new ProductsModel({
-        id: req.body.ID,
+        id: req.body.id,
         name: req.body.name,
         description: req.body.description,
         period: req.body.period,
