@@ -1,7 +1,6 @@
-import React, { createContext, useState, useEffect} from "react";
+import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
-import {List} from '../../assets/assets';
-
+import { List } from '../../assets/assets';
 
 // Create the context
 export const StoreContext = createContext(null);
@@ -18,36 +17,43 @@ const StoreContextProvider = (props) => {
     // Function to add an item to the cart
     
     // Function to add an item to the cart
-    const addToCart = async (id) => {
-        setCartItems((prevItems) => ({
-            ...prevItems,
-            [id]: (prevItems[id] || 0) + 1,
-        }));
-        if(token){
-            await axios.post(url+"/api/cart/add", {id}, {headers:{token}})
-        }
-    }
-
-
-    // Function to remove an item from the cart
-    const RemoveFromCart = async (id) => {
+    const addToCart = async (itemId) => {
         setCartItems((prevItems) => {
-            const updatedItems = { ...prevItems };
-            if (updatedItems[id] > 1) {
-                updatedItems[id] -= 1;
-            } else {
-                delete updatedItems[id];
+            const newCount = (prevItems[itemId] || 0) + 1;
+            const updatedItems = { ...prevItems, [itemId]: newCount };
+    
+            // Send the updated count to the backend via the existing "add" route
+            if (token) {
+                axios.post(url + "/api/cart/add", { itemId, count: newCount }, { headers: { token } });
             }
             return updatedItems;
         });
-        if(token){
-            await axios.post(url+"/api/cart/remove", {id}, {headers:{token}})
-        }
     };
+
+    const RemoveFromCart = async (itemId) => {
+        setCartItems((prevItems) => {
+            const updatedItems = { ...prevItems };
+            const newCount = updatedItems[itemId] > 1 ? updatedItems[itemId] - 1 : 0;
+    
+            if (newCount > 0) {
+                updatedItems[itemId] = newCount;
+            } else {
+                delete updatedItems[itemId];
+            }
+    
+            // Send the new count to the backend via the existing "remove" route
+            if (token) {
+                axios.post(url + "/api/cart/remove", { itemId, count: newCount }, { headers: { token } });
+            }
+            return updatedItems;
+        });
+    };
+    
+
 
     useEffect(() => {
         console.log(cartItems);
-    },[cartItems])
+    }, [cartItems]);
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
@@ -61,33 +67,34 @@ const StoreContextProvider = (props) => {
         }
         return totalAmount;
     };
-    
-    
 
-
-    const fetchProductList = async () =>{
-        const response = await axios.get(url+"/api/Products/list");
+    const fetchProductList = async () => {
+        const response = await axios.get(url + "/api/Products/list");
         setList(response.data.data);
     };
 
-    useEffect(()=>{
-        async function loadData(){
-            await fetchProductList()
-            if(localStorage.getItem("token")){
-                setToken(localStorage.getItem("token"));
+    const loadCartData = async (token) => {
+        const response = await axios.post(url + "/api/cart/get", {}, {headers: {token}});
+        setCartItems(response.data.cartData); 
+    }
+
+    useEffect(() => {
+        async function loadData() {
+            await fetchProductList();
+            const storedToken = localStorage.getItem("token");
+            if (storedToken) {
+                setToken(storedToken);
+                await loadCartData(storedToken);
             }
         }
         loadData();
-    },[])
+    }, []);
 
-
-    // Context value containing the product list, cart items, and cart functions
-
-    useEffect(()=>{
-        if(localStorage.getItem("token")){
-            setToken(localStorage.getItem("token"))
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            setToken(localStorage.getItem("token"));
         }
-    },[]);
+    }, []);
 
     const contextValue = {
         List,
