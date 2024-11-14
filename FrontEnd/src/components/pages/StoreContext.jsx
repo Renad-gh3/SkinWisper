@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
-import { List } from '../../assets/assets';
+/*import { List } from '../../assets/assets';*/
 
 // Create the context
 export const StoreContext = createContext(null);
