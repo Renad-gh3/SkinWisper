@@ -1,43 +1,28 @@
-/* Main Container */
+
+
 .explore-menu {
     text-align: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #f0f4f8, #e6f7f8);  
+    padding: 30px; 
+    background: linear-gradient(135deg, #f0f4f8, #e6f7f8);
 }
-
 
 .explore-menu h1 {
-    font-size: 3rem;
-    color: #4CAF50;  
-    font-family: 'Montserrat', sans-serif;  
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    font-size: 2.5rem; 
+    color: #4CAF50;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px; 
 }
 
-
 .explore-menu-text {
-    margin-bottom: 30px;
-    font-size: 1.4rem;
-    color: #666; 
+    margin-bottom: 20px; 
+    font-size: 1.2rem;
+    color: #666;
     font-family: 'Roboto', sans-serif;
 }
 
 
-.explore-menu-list {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    gap: 30px; 
-    flex-wrap: nowrap; 
-    padding: 20px;
-    max-width: 1200px; 
-    margin: 0 auto; 
-}
 
-.explore-menu-list-item {
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
+
 
 .explore-menu-list-item:hover {
     transform: scale(1.1); 
@@ -49,16 +34,23 @@
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    object-position: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .circular-image:hover {
-    transform: scale(1.05); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 
+.circular-image.active {
+    border: 4px solid #5b9c3d;
+}
+
+ 
 .menu-item-name {
     margin-top: 10px;
     font-size: 1.2rem;
@@ -68,6 +60,7 @@
     text-align: center;
     letter-spacing: 0.05em; 
 }
+
 
 button.get-started {
     background-color: #4CAF50;
@@ -87,7 +80,6 @@ button.get-started:hover {
     box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
 }
 
-  
 @media (max-width: 768px) {
     .explore-menu-list {
         flex-wrap: wrap; 
@@ -97,11 +89,4 @@ button.get-started:hover {
         margin-bottom: 20px;
     }
 }
-
-.circular-image.active {
-    border: 4px solid #5b9c3d;
-    padding: 2px;
-}
-
-
 

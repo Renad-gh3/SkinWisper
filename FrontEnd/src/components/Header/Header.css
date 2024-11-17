@@ -1,27 +1,26 @@
 
-.header {
-    background-size: cover;  /* Ensure the background image covers the entire header */
-    background-position: center;  /* Center the background image */
-    background-repeat: no-repeat;  /* No repeating */
+/*.header 
+    background-position: center;  
+    background-repeat: no-repeat;
     padding: 80px 50px;
     color: white;
     position: relative;
-    height: 400px;  /* Set height for the header */
+    height: 400px;  
 }
 
-/* Container for Header Elements */
+
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;  /* Align the text to the right */
+    justify-content: flex-end;  
     align-items: center;
-    height: 100%;  /* Full height to center text vertically */
+    height: 100%;  
 }
 
-/* Text Section */
+
 .header-text {
-    text-align: right;  /* Align text to the right */
+    text-align: right;  
 }
 
 .header-text h1 {
@@ -34,7 +33,7 @@
     margin-bottom: 20px;
 }
 
-/* CTA Button */
+
 .get-started-button {
     background-color: white;
     color: #5b9c3d;
@@ -44,7 +43,7 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
 }
 
 .get-started-button:hover {
@@ -52,7 +51,7 @@
     color: #5b9c3d;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -65,6 +64,163 @@
 
     .header-text h1 {
         font-size: 2rem;
+    }
+
+    .get-started-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}*/
+/* Main Header Container */
+.header {
+    display: flex;
+    height: 450px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #5B9C3D, #3A5E2D); /* Gradient from primary to darker green */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gradient Overlay */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15));
+    padding: 0 60px;
+}
+
+/* Right-Aligned Content */
+.header-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(-20px); /* Subtle entrance */
+    opacity: 0;
+    animation: slideIn 1.5s ease forwards; /* Animation for entrance */
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Header Title */
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle */
+.header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+    line-height: 1.4;
+}
+
+/* CTA Button */
+.get-started-button {
+    background-color: #5B9C3D;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.get-started-button:hover {
+    background: linear-gradient(to right, #A8D5A2, #5B9C3D); /* Light to main green gradient */
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Explore Menu Background for Better Section Separation */
+.explore-menu {
+    background-color: #F0F4F8; /* Light grayish background */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Circular Image Styling */
+.circular-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent; /* Default border color */
+}
+
+.circular-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Active Circular Image Border */
+.circular-image.active {
+    border: 3px solid #5B9C3D; /* Primary green border for active state */
+}
+
+/* Problem Name Styling */
+.menu-item-name {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Lora', serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 350px;
+    }
+
+    .header-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
 
     .get-started-button {

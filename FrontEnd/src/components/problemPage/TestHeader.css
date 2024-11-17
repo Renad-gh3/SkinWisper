@@ -1,70 +1,121 @@
 
-.header {
-    background-size: cover;  /* Ensure the background image covers the entire header */
-    background-position: center;  /* Center the background image */
-    background-repeat: no-repeat;  /* No repeating */
-    padding: 80px 50px;
-    color: white;
-    position: relative;
-    height: 400px;  /* Set height for the header */
-}
-
-/* Container for Header Elements */
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* Main Header Styling */
+.test-header {
     display: flex;
-    justify-content: flex-end;  /* Align the text to the right */
+    height: 450px;
+    color: white;
     align-items: center;
-    height: 100%;  /* Full height to center text vertically */
+    justify-content: center;
+    background: linear-gradient(to right, #5B9C3D, #3A5E2D); /* Gradient background */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Text Section */
-.header-text {
-    text-align: right;  /* Align text to the right */
+/* Gradient Overlay */
+.test-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15));
+    padding: 0 60px;
+    
 }
 
-.header-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+
+
+/* Right-Aligned Content */
+.test-header-content {
+    position: relative;
+    text-align: left;
+    z-index: 2;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); /* Slight transparency for a softer look */
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(-20px); /* Subtle entrance */
+    opacity: 0;
+    animation: slideIn 1.5s ease forwards; /* Animation for entrance */
 }
 
-.header-text p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Header Title */
+.test-header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+/* Subtitle */
+.test-header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+    line-height: 1.4;
+    text-align: left;
 }
 
 /* CTA Button */
 .get-started-button {
-    background-color: white;
-    color: #5b9c3d;
+    background-color: #5B9C3D;
+    color: white;
     border: none;
     padding: 15px 40px;
     font-size: 1.1rem;
     border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .get-started-button:hover {
-    background-color: #e0e0e0;
-    color: #5b9c3d;
+    background: linear-gradient(to right, #A8D5A2, #5B9C3D); /* Light to main green gradient */
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
+    .test-header {
+        height: 350px;
     }
 
-    .header-text {
-        text-align: center;
+    .test-header-content {
+        max-width: 90%;
+        padding: 15px;
     }
 
-    .header-text h1 {
-        font-size: 2rem;
+    .test-header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .test-header-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
 
     .get-started-button {
@@ -72,3 +123,4 @@
         font-size: 1rem;
     }
 }
+
