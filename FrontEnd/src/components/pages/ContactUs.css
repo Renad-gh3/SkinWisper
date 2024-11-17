@@ -1,78 +1,170 @@
-.contact-us-container {
-    text-align: center;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .contact-us-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .contact-us-description {
-    margin-bottom: 40px;
-    font-size: 1.5rem;
-  }
-  
-  .about-us-container {
-    background-color: #5b9c3d;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-  }
+/* About Us Header Styling */
+.about-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
 
-  .about-us-title {
-    font-size: 2rem;
-    color: white;
-    margin: 20px 0;
-  }
-  
-  .about-us-description {
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-  }
+.about-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: right;
+  color: white;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: 20px;
+}
 
-  .social-media-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #5b9c3d;
-    border-radius: 8px;
-  }
-  
-  .social-media-item {
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-icon {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .social-media-name {
-    margin-left: 10px;
-    font-size: 1.5rem;
-    color: white;
-  }
-  
-  .footer-links {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .footer-link {
-    cursor: pointer;
-    color: #007BFF;
-    font-size: 1.5rem;
-    margin: 0 20px; /* Space between links */
-  }
-  
-  .footer-link:hover {
-    text-decoration: underline;
-  }
+.about-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #4CAF50;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.about-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-us-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.contact-title {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 40px;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  text-align: center;
+  width: 160px; /* Ensure uniform width for better alignment */
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+}
+
+.contact-bubble {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e0f7e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.contact-detail {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.team-section {
+  padding: 60px 20px; /* Balanced padding */
+  background-color: #f4f8f6; /* Soft minty green background */
+  text-align: center;
+}
+
+.team-title {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #2c3e50; /* Muted navy blue for the title */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 25px; /* Space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  flex: 1 1 calc(33% - 40px); /* Ensures 3 cards per row on larger screens */
+  max-width: 300px; /* Set a maximum width for each card */
+  background: linear-gradient(135deg, #e6f2ed, #ffffff); /* Soft white-to-green gradient */
+  border-radius: 20px;
+  padding: 20px 25px;
+  text-align: center;
+  color: #2c3e50; /* Dark muted text */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-name {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50; /* Dark muted navy */
+}
+
+.team-link {
+  display: inline-block;
+  font-size: 1em;
+  text-decoration: none;
+  background-color: #4caf50; /* Soft green button */
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.team-link:hover {
+  background-color: #388e3c; /* Slightly darker green */
+  transform: scale(1.05);
+}
+
+.no-profile {
+  background-color: #cccccc; /* Neutral gray for disabled */
+  color: #666666; /* Medium gray text */
+  cursor: not-allowed;
+  border-radius: 25px;
+  padding: 10px 20px;
+}

@@ -116,3 +116,39 @@
 .cart-totals-actions button:hover {
     background-color: #218838;
 }
+.cart-empty {
+    text-align: center;
+    margin-top: 50px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.empty-cart-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.cart-empty p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.start-shopping-link {
+    color: #28a745;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.start-shopping-link:hover {
+    text-decoration: underline;
+}
+
+
