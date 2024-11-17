@@ -15,7 +15,7 @@ import StoreContextProvider from './components/pages/StoreContext.jsx';
 import Cart from './components/pages/Cart.jsx'
 import PlaceOrder from './components/pages/PlaceOrder.jsx';
 const App = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('home'); //not sure who add this, maybe me (samar)
 
   const handleScroll = () => {
     const sections = document.querySelectorAll("section");
@@ -56,7 +56,8 @@ const App = () => {
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/order' element={<PlaceOrder />} />
-            <Route path='/verify' element={<verify/>}/>
+         
+            
           </Routes>
           <Footer id="footer" /> 
         </div>
