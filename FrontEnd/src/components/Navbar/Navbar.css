@@ -9,8 +9,10 @@
     z-index: 1000;
 }
 .logo{
+
     width: 300px;
     cursor: pointer;
+
 }
 .navbar-menu{
     display: flex;
@@ -19,6 +21,7 @@
     color: #5b9c3d;
     font-size: 18px;
     flex: 1;
+    flex-grow: 1; /* Allow menu to grow and occupy center space */
     justify-content: center;
 }
 .navbar-menu li{
@@ -28,7 +31,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-left: auto;
+   /* margin-left: auto;*/
+   margin-left: 20px; /* Adds space between menu and right section */
 }
 .navbar-right img{
     width: 24px;

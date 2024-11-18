@@ -5,6 +5,9 @@ import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { StoreContext } from '../pages/StoreContext';
 
+import {Link} from 'react-router-dom';
+
+
 const Navbar = ({activeSection, setShowLogin}) => {
 
   const [menu, setMenu] = useState("menu");
@@ -26,7 +29,9 @@ const Navbar = ({activeSection, setShowLogin}) => {
 
   return (
     <div className= 'navbar'>
-      <Link to="/" ><img src={assets.logo} alt="" className="logo" /></Link>
+
+       <Link to="/" ><img src={assets.logo} alt="" className="logo" /></Link>
+
       <ul className="navbar-menu">
         <li><NavLink to= "/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
         <li><NavLink to="/product" className={({ isActive }) => (isActive ? "active" : "")}>Our Shop</NavLink></li>

@@ -35,6 +35,7 @@
 
 .cart-items-item img {
     width: 50px;
+
     border-radius: 5px;
 }
 
@@ -63,6 +64,7 @@
 
 .cart-totals {
     border: 1px solid #e2e2e2;
+
     border-radius: 5px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -75,6 +77,7 @@
     color: #333;
     text-align: center;
 }
+
 
 .cart-total-details {
     display: flex;
@@ -115,4 +118,39 @@
 
 .cart-totals-actions button:hover {
     background-color: #218838;
+}
+.cart-empty {
+    text-align: center;
+    margin-top: 50px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.empty-cart-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.cart-empty p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.start-shopping-link {
+    color: #28a745;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.start-shopping-link:hover {
+    text-decoration: underline;
+
 }

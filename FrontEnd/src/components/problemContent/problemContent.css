@@ -1,4 +1,4 @@
-.problem-container {
+/*.problem-container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -41,3 +41,78 @@
   border-radius: 5px;
   margin-top: 10px;
 }
+*/
+
+/* Problem Container */
+/* Container Styling */
+/* Problem Container */
+.problem-container {
+  padding: 40px;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Problem Boxes */
+.problem-boxes {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Individual Problem Box */
+.problem-box {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.problem-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid #4caf50; /* Add border on hover */
+}
+
+/* Problem Box Titles */
+.problem-box h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1b5e20;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #4caf50;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+
+/* Problem Box Content */
+.problem-box p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .problem-boxes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .problem-box {
+    width: 100%;
+  }
+}
+
+

@@ -1,10 +1,12 @@
+
 /*import React, { useContext } from 'react';
 import './Cart.css';
 import { StoreContext } from './StoreContext';
 //<img src={"http://localhost:5000/images/"+item.image} alt={item.name} />
 const Cart = () => {
-  const { cartItems, List, RemoveFromCart, getTotalCartAmount, } = useContext(StoreContext);
-a1d410d57f81e1c9b35218efe1f3ea6b491a69ad
+
+  const { cartItems, List, RemoveFromCart, getTotalCartAmount } = useContext(StoreContext);
+
   return (
     <div className='cart'>
       <div className="cart-item">
@@ -73,17 +75,19 @@ import React, { useContext } from 'react';
 import './Cart.css';
 import { StoreContext } from './StoreContext';
 
-import { useNavigate } from 'react-router-dom';     /*NOT SURE*/
-
+import emptyCart from "../../assets/empty.png";
+import { Link } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 const Cart = () => {
   const { cartItems, List, RemoveFromCart, getTotalCartAmount } = useContext(StoreContext);
-
+  const hasItemsInCart = List && List.some((item) => cartItems[item.id] > 0);
   const navigate = useNavigate();
-
-  //<img src={"http://localhost:5000/images/"+item.image} alt={item.name} />   url+"/images/"+
+  console.log("List:", List);
+  console.log("Cart Items:", cartItems);
   return (
     <div className='cart'>
-       {/* Cart Header */}
+      {/* Cart Header */}
+
       <div className='cart-item-title'>
         <div className='cart-header'>Items</div>
         <div className='cart-header'>Title</div>
@@ -94,11 +98,13 @@ const Cart = () => {
       </div>
 
       {/* Cart Items */}
-      {List && List.length > 0 ? (
+
+      {hasItemsInCart ?(
         List.filter((item) => cartItems[item.id] > 0).map((item) => (
           <div key={item.id} className='cart-items-item'>
             <div className='cart-item-detail'>
               <img src={"http://localhost:5000/images/"+item.image} alt={item.name} />
+
             </div>
             <div className='cart-item-detail'>
               <p>{item.name}</p>
@@ -118,8 +124,12 @@ const Cart = () => {
           </div>
         ))
       ) : (
-        <p>Your cart is empty</p>
-      )}
+        <div className="cart-empty">
+        <img src={emptyCart}alt="Empty cart" className="empty-cart-image" />
+        <p>Your shopping cart is empty</p>
+        <Link to="/product"className="start-shopping-link">Start shopping</Link>
+      </div> )}
+
 
       {/* Cart Totals */}
       <div className="cart-bottom">
@@ -131,7 +141,9 @@ const Cart = () => {
           </div>
           <div className="cart-total-details">
             <p>Delivery Fee</p>
+
             <p>${getTotalCartAmount()===0?0:2}</p>
+
           </div>
           <div className="cart-total-details">
             <b>Total</b>
@@ -146,4 +158,7 @@ const Cart = () => {
   );
 };
 
+
 export default Cart;
+
+

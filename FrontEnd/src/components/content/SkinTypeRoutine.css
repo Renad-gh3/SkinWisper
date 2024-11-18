@@ -1,4 +1,4 @@
-.routine-container {
+/*.routine-container {
   text-align: left;
   padding: 30px;
   font-family: "Roboto", sans-serif;
@@ -10,7 +10,7 @@
 
 .routine-container h2,
 .routine-container p {
-  text-align: center; /* Center just the header and paragraph */
+  text-align: center; 
 }
 
 .routine-container h2 {
@@ -20,7 +20,7 @@
 }
 
 .routine-toggle-container {
-  text-align: center; /* Center the Morning/Evening buttons */
+  text-align: center; 
   margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@
   margin-bottom: 20px;
 }
 
-/* Toggle Button Styling */
+
 .routine-toggle {
   display: inline-flex;
   border: 1px solid #5b9c3d;
@@ -59,7 +59,7 @@
   color: white;
 }
 
-/* Routine Step Styling */
+
 .routine-steps {
   margin-top: 20px;
 }
@@ -93,7 +93,7 @@
   color: #5a6473;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .routine-toggle button {
     padding: 8px 15px;
@@ -101,5 +101,143 @@
 
   .routine-step-header h3 {
     font-size: 1rem;
+  }
+}*/
+/* Routine Container */
+.routine-container {
+  font-family: "Roboto", sans-serif;
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header */
+.routine-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #4a8031; /* Green for branding */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.routine-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5a6473; /* Neutral gray for subtitle */
+  margin-bottom: 20px;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Toggle Buttons */
+.routine-toggle-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.routine-toggle {
+  display: inline-flex;
+  border: 2px solid #4a8031;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.routine-toggle button {
+  padding: 12px 30px;
+  border: none;
+  background: none;
+  color: #4a8031;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.routine-toggle button.active {
+  background-color: #4a8031; /* Green for active button */
+  color: white; /* White text for better contrast */
+}
+
+.routine-toggle button:hover {
+  background-color: #5b9c3d;
+  color: white;
+}
+
+/* Routine Cards */
+.routine-card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.routine-card {
+  flex: 1;
+  max-width: calc(33.33% - 20px);
+  background: #ffffff; /* White card background */
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.routine-card:hover {
+  transform: translateY(-5px); /* Slight upward hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Routine Circle */
+.routine-card .routine-circle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #4a8031; /* Green for branding */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Ensure proper spacing */
+}
+
+/* Stage Content */
+.routine-content h3 {
+  font-size: 1.3rem;
+  color: #4a8031; /* Green for headings */
+  font-weight: 600;
+  margin-top: 30px; /* Add spacing from the number circle */
+  margin-bottom: 10px; /* Standard spacing below the heading */
+}
+
+.routine-content p {
+  font-size: 1rem;
+  color: #5a6473;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .routine-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .routine-card {
+    max-width: 100%;
+  }
+
+  .routine-card .routine-circle {
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
