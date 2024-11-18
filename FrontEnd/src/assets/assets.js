@@ -1,6 +1,8 @@
 import logo from './logo1.png'
 import search_icon from './search-icon.png'
 import cart_icon from './cart.png'
+import profile_icon from './profile.png'
+import logout_icon from './logout.png'
 import header from'./header2.png'
 import combination from'./comb.png'
 import normal from './normal.png'
@@ -28,7 +30,7 @@ import  image_6 from './6.jpg';
 import  image_7 from './7.jpg';
 import  image_8 from './8.jpg';
 import  image_9 from './9.jpg';
-import  image_10 from './10.jpg';
+import  image_10 from './night category.jpg';
 import  image_11 from './11.jpg';
 import  image_12 from './12.jpg';
 import  image_13 from './13.jpg';
@@ -37,10 +39,9 @@ import  image_15 from './15.jpg';
 import  image_16 from './16.jpg';
 import  image_17 from './17.jpg';
 import  image_18 from './18.jpg';
-
-
-
-
+import  image_19 from './cleanser category.jpg';
+import  image_20 from './sunscreen category.jpg';
+import  image_21 from './Moisturizer category.jpg';
 
 
 
@@ -69,17 +70,19 @@ export const assets = {
     logo,
     search_icon,
     cart_icon,
+    profile_icon,
+    logout_icon,
     header,
     menu_list,problemHeader
 }
 
 export const skincareMenu = [
     { menu_name:"Night Cream",menu_image: image_10 },
-    {menu_name:"serum", menu_image: serum },
-    { menu_name:"sunscreen",menu_image: sunscreen },
+    { menu_name:"Serum", menu_image: serum },
+    { menu_name:"Sunscreen",menu_image: image_20 },
     { menu_name:"Toner",menu_image: image_3 },
-    { menu_name:"Cleanser",menu_image: image_4 },
-    { menu_name:"moisturizing cream",menu_image: moisturizingCream }
+    { menu_name:"Cleanser",menu_image: image_19 },
+    { menu_name:"Moisturizer",menu_image: image_21 }
 ];
 
 

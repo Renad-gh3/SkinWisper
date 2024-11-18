@@ -2,8 +2,9 @@
 /*import React, { useContext } from 'react';
 import './Cart.css';
 import { StoreContext } from './StoreContext';
-
+//<img src={"http://localhost:5000/images/"+item.image} alt={item.name} />
 const Cart = () => {
+
   const { cartItems, List, RemoveFromCart, getTotalCartAmount } = useContext(StoreContext);
 
   return (
@@ -73,16 +74,20 @@ export default Cart;*/
 import React, { useContext } from 'react';
 import './Cart.css';
 import { StoreContext } from './StoreContext';
+
 import emptyCart from "../../assets/empty.png";
 import { Link } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 const Cart = () => {
   const { cartItems, List, RemoveFromCart, getTotalCartAmount } = useContext(StoreContext);
   const hasItemsInCart = List && List.some((item) => cartItems[item.id] > 0);
+  const navigate = useNavigate();
   console.log("List:", List);
   console.log("Cart Items:", cartItems);
   return (
     <div className='cart'>
       {/* Cart Header */}
+
       <div className='cart-item-title'>
         <div className='cart-header'>Items</div>
         <div className='cart-header'>Title</div>
@@ -93,11 +98,13 @@ const Cart = () => {
       </div>
 
       {/* Cart Items */}
+
       {hasItemsInCart ?(
         List.filter((item) => cartItems[item.id] > 0).map((item) => (
           <div key={item.id} className='cart-items-item'>
             <div className='cart-item-detail'>
-              <img src={item.image} alt={item.name} />
+              <img src={"http://localhost:5000/images/"+item.image} alt={item.name} />
+
             </div>
             <div className='cart-item-detail'>
               <p>{item.name}</p>
@@ -123,6 +130,7 @@ const Cart = () => {
         <Link to="/product"className="start-shopping-link">Start shopping</Link>
       </div> )}
 
+
       {/* Cart Totals */}
       <div className="cart-bottom">
         <div className="cart-totals">
@@ -133,25 +141,24 @@ const Cart = () => {
           </div>
           <div className="cart-total-details">
             <p>Delivery Fee</p>
-            <p>$2</p>
+
+            <p>${getTotalCartAmount()===0?0:2}</p>
+
           </div>
           <div className="cart-total-details">
             <b>Total</b>
-            <b>${getTotalCartAmount() + 2}</b>
+            <b>${getTotalCartAmount()===0?0:getTotalCartAmount() + 2}</b>
           </div>
         </div>
         <div className="cart-totals-actions">
-          <button>PROCEED TO CHECKOUT</button>
+        <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
         </div>
       </div>
     </div>
   );
 };
 
+
 export default Cart;
-
-
-
-
 
 

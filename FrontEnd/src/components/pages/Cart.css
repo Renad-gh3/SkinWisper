@@ -35,6 +35,7 @@
 
 .cart-items-item img {
     width: 50px;
+
     border-radius: 5px;
 }
 
@@ -63,6 +64,7 @@
 
 .cart-totals {
     border: 1px solid #e2e2e2;
+
     border-radius: 5px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -75,6 +77,7 @@
     color: #333;
     text-align: center;
 }
+
 
 .cart-total-details {
     display: flex;
@@ -149,6 +152,5 @@
 
 .start-shopping-link:hover {
     text-decoration: underline;
+
 }
-
-

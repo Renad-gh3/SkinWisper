@@ -13,8 +13,9 @@ import StoreContextProvider from './components/pages/StoreContext.jsx';
 //import prodect from './components/pages/product.jsx';
 //import ExploreMenuItem from './components/pages/ExploreMenuItem.jsx';
 import Cart from './components/pages/Cart.jsx'
+import PlaceOrder from './components/pages/PlaceOrder.jsx';
 const App = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('home'); //not sure who add this, maybe me (samar)
 
   const handleScroll = () => {
     const sections = document.querySelectorAll("section");
@@ -54,6 +55,9 @@ const App = () => {
             <Route path='/problemPage' element={<ProblemPage />} /> 
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/order' element={<PlaceOrder />} />
+         
+            
           </Routes>
           <Footer id="footer" /> 
         </div>

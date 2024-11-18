@@ -9,11 +9,10 @@
     z-index: 1000;
 }
 .logo{
-   /* width: 20%;
-    cursor: pointer;*/
-        width: 120px; /* Fixed width for better alignment */
-        cursor: pointer;
-        margin-right: 20px; /* Space between logo and menu */
+
+    width: 300px;
+    cursor: pointer;
+
 }
 .navbar-menu{
     display: flex;
@@ -70,6 +69,44 @@
     border-radius: 5px;
     top: -8px;
     right: -8px;
+}
+
+.navbar-profile{
+    position: relative;
+}
+
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #5b9c3d;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover{
+    color: #5b9c3d;
 }
 
 @media (max-width: 1050px){

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 //comment
 const ProductsSchema = new mongoose.Schema({
+  id: { type: Number, required: true },
   name: { type: String, required: true },
   description: { type: String, required: true },
   period: { type: String, required: true },
