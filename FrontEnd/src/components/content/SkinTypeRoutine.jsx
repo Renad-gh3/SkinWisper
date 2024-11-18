@@ -154,7 +154,11 @@ import "./SkinTypeRoutine.css";
 const SkinTypeRoutine = ({ category }) => {
   const [routineData, setRoutineData] = useState([]);
   const [selectedRoutine, setSelectedRoutine] = useState("Morning");
-  const [showStages, setShowStages] = useState({ stage1: false, stage2: false, stage3: false });
+  const [showStages, setShowStages] = useState({
+    stage1: false,
+    stage2: false,
+    stage3: false,
+  });
 
   const toggleStage = (stage) => {
     setShowStages((prev) => ({
@@ -166,7 +170,9 @@ const SkinTypeRoutine = ({ category }) => {
   useEffect(() => {
     const fetchRoutineData = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/SkinType/list");
+        const response = await axios.get(
+          "http://localhost:5000/api/SkinType/list"
+        );
         setRoutineData(response.data.data);
       } catch (error) {
         console.error("Error fetching routine data:", error);
@@ -223,7 +229,8 @@ const SkinTypeRoutine = ({ category }) => {
                       <strong>Product:</strong> {filteredRoutine[0].S1product}
                     </p>
                     <p>
-                      <strong>Suggestion:</strong> {filteredRoutine[0].S1suggestion}
+                      <strong>Suggestion:</strong>{" "}
+                      {filteredRoutine[0].S1suggestion}
                     </p>
                   </>
                 )}
@@ -241,7 +248,8 @@ const SkinTypeRoutine = ({ category }) => {
                       <strong>Product:</strong> {filteredRoutine[0].S2product}
                     </p>
                     <p>
-                      <strong>Suggestion:</strong> {filteredRoutine[0].S2suggestion}
+                      <strong>Suggestion:</strong>{" "}
+                      {filteredRoutine[0].S2suggestion}
                     </p>
                   </>
                 )}
@@ -259,7 +267,8 @@ const SkinTypeRoutine = ({ category }) => {
                       <strong>Product:</strong> {filteredRoutine[0].S3product}
                     </p>
                     <p>
-                      <strong>Suggestion:</strong> {filteredRoutine[0].S3suggestion}
+                      <strong>Suggestion:</strong>{" "}
+                      {filteredRoutine[0].S3suggestion}
                     </p>
                   </>
                 )}
@@ -267,9 +276,11 @@ const SkinTypeRoutine = ({ category }) => {
             </div>
           </>
         )}
-         {filteredRoutine.length === 0 && (
-            <p className="no-routine-message">No routine found for this skin type and period.</p>
-          )}
+        {filteredRoutine.length === 0 && (
+          <p className="no-routine-message">
+            No routine found for this skin type and period.
+          </p>
+        )}
       </div>
     </div>
   );
