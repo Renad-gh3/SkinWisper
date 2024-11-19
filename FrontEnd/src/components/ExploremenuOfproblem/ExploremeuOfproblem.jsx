@@ -44,9 +44,9 @@ import { menu_problem } from "../../assets/assets";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className="menu_problem" id="menu_problem">
-      <h1 className="menu-title">Discover Your Skin Type</h1>
+      <h1 className="menu-title">Discover Your Skin Problem</h1>
       <p className="menu-description">
-        Select your skin type to unlock the perfect skincare routine for you.
+        Select your skin problem to unlock the perfect solution for you.
       </p>
       <div className="horizontal-scroll-container">
         <div className="menu-circular-container">
