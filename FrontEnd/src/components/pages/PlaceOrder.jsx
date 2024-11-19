@@ -4,7 +4,7 @@ import { StoreContext } from "./StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount, List, cartItems } = useContext(StoreContext);
+  const { getTotalCartAmount, List, cartItems, resetCart } = useContext(StoreContext);
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -101,6 +101,7 @@ const PlaceOrder = () => {
   const goToHomePage = () => {
     setShowPopup(false);
     navigate("/"); // Navigate to the home page
+    resetCart();
   };
 
   return (
