@@ -36,6 +36,7 @@ const LoginPopUp = ({setShowLogin}) => {
     if (response.data.success) {
       setToken(response.data.token); // Set token via context
       localStorage.setItem("token", response.data.token); // Store token
+      localStorage.setItem("email", data.email); // Store the email from the frontend data
       loadCartData(response.data.token);
       setShowLogin(false); // Close popup
     } else {

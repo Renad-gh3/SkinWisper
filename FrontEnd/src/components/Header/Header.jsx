@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./Header.css";
+import { StoreContext } from '../pages/StoreContext';
 import headerImage from "../../assets/headerSkin.png";
+import axios from "axios";
 
 const Header = () => {
   const [showQuiz, setShowQuiz] = useState(false);
   const [answers, setAnswers] = useState([]);
   const [result, setResult] = useState("");
+  const { url, token, setToken} = useContext(StoreContext); // Access the base URL and token
+  //const storedToken = localStorage.getItem("token");
+  let skinType = "";
   const [headerText, setHeaderText] = useState({
     title: "Discover Your Skin Type!",
     subtitle: "Take Our Quick Test Now",
@@ -75,13 +80,13 @@ const Header = () => {
     });
 
     const max = Math.max(counts.A, counts.B, counts.C, counts.D);
-    let skinType = "";
     if (counts.A === max) skinType = "Dry or sensitive skin";
     if (counts.B === max) skinType = "Normal skin";
     if (counts.C === max) skinType = "Combination skin";
     if (counts.D === max) skinType = "Oily skin";
 
     setResult(skinType);
+    fetchSkinType(token);
 
     // Update header text dynamically
     setHeaderText({
@@ -93,14 +98,28 @@ const Header = () => {
     setShowQuiz(false);
   };
 
+  // Function to fetch skin type
+  const fetchSkinType = async (token) => {
+    try {
+      const storedEmail = localStorage.getItem("email"); // Assume email is stored in localStorage
+      console.log(skinType +"\n"+ storedEmail)
+      if (!storedEmail) return;
+      const response = await axios.put(url+"/api/user/update-skin-type",{ email: storedEmail, skinType: skinType},{ headers: { token } });
+      console.log(skinType+" added to "+storedEmail+" database")
+    } catch (error) {
+      console.log("Error fetching skin type:", error);
+    }
+  };
+  
   const retakeTest = () => {
-    setShowQuiz(true);
+    // Reset quiz state
     setAnswers([]);
     setResult("");
     setHeaderText({
       title: "Discover Your Skin Type!",
       subtitle: "Take Our Quick Test Now",
     });
+    setShowQuiz(true); // Show the quiz again for retaking
   };
 
   return (
