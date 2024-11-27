@@ -76,5 +76,42 @@ const registerUser = async (req, res) => {
     }
 }
 
-export { loginUser , registerUser }
+const getSkinType = async (req, res) => {
+    const { email } = req.body; // Accept email from the request body
+    try {
+        const userData = await userModel.findOne({ email });
+        
+        if (!userData) {
+            return res.json({ success: false, message: "User not found" });
+        }
+
+        res.json({ success: true, skinType: userData.skinType });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error" });
+    }
+};
+
+// Update Skin Type
+const updateSkinType = async (req, res) => {
+    const { email, skinType } = req.body; // Accept email and skinType from the request body
+    try {
+        const userData = await userModel.findOne({ email }); // Find user by email
+        
+        if (!userData) {
+            return res.json({ success: false, message: "User not found" });
+        }
+
+        // Update skin type
+        userData.skinType = skinType;
+        await userData.save();
+
+        res.json({ success: true, message: "Skin type updated successfully" });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error" });
+    }
+};
+
+export { loginUser, registerUser, getSkinType, updateSkinType };
 
