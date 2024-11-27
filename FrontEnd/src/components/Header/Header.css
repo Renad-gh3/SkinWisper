@@ -203,6 +203,30 @@
   cursor: not-allowed;
 }
 
+/* Retake Test Button */
+.retake-test-button {
+  background-color: #5b9c3d;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.retake-test-button:hover {
+  background: linear-gradient(
+    to right,
+    #a8d5a2,
+    #5b9c3d
+  ); /* Light to main green gradient */
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .header {

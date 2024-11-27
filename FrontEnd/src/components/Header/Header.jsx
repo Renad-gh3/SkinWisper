@@ -120,6 +120,11 @@ const Header = () => {
               GET STARTED
             </button>
           )}
+          {result && (
+            <button onClick={retakeTest} className="retake-test-button">
+              Retake Test
+            </button>
+          )}
         </div>
       </div>
 
@@ -128,8 +133,7 @@ const Header = () => {
           <div
             className="quiz-overlay"
             onClick={() => setShowQuiz(false)}
-          ></div>{" "}
-          {/* Overlay */}
+          ></div>
           <div className="quiz-popup">
             <div className="quiz-questions">
               <h2>Determine Your Skin Type</h2>
