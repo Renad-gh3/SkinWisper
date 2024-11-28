@@ -4,7 +4,7 @@ import { StoreContext } from "./StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount, List, cartItems } = useContext(StoreContext);
+  const { getTotalCartAmount, List, cartItems, resetCart } = useContext(StoreContext);
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -101,6 +101,7 @@ const PlaceOrder = () => {
   const goToHomePage = () => {
     setShowPopup(false);
     navigate("/"); // Navigate to the home page
+    resetCart();
   };
 
   return (
@@ -198,7 +199,7 @@ const PlaceOrder = () => {
             </div>
           </div>
           <div className="cart-totals-actions">
-            <button type="submit">PROCEED TO PAYMENT</button>
+            <button type="submit">SUBMIT ORDER</button>
           </div>
         </div>
       </form>
@@ -207,8 +208,8 @@ const PlaceOrder = () => {
       {showPopup && (
         <div className="popup-overlay" onClick={goToHomePage}>
           <div className="popup-content">
-            <p>YOUR ORDER HAS BEEN SHIPPED, THANK YOU FOR ORDERING!!</p>
-            <button onClick={goToHomePage}>Home Page</button>
+            <p>YOUR REQUEST HAS BEEN RECEIVED, THANK YOU FOR ORDERING!!</p>
+            <button onClick={goToHomePage}>Go To Home Page</button>
           </div>
         </div>
       )}

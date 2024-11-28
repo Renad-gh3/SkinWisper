@@ -6,7 +6,7 @@ import { StoreContext } from '../pages/StoreContext';
 
 const LoginPopUp = ({setShowLogin}) => {
   
-  const {url, setToken} = useContext(StoreContext)
+  const {url, setToken, loadCartData} = useContext(StoreContext)
   const [currState, setCurrState]= useState("login");
   const [data, setData] = useState({
     name:"",
@@ -36,6 +36,8 @@ const LoginPopUp = ({setShowLogin}) => {
     if (response.data.success) {
       setToken(response.data.token); // Set token via context
       localStorage.setItem("token", response.data.token); // Store token
+      localStorage.setItem("email", data.email); // Store the email from the frontend data
+      loadCartData(response.data.token);
       setShowLogin(false); // Close popup
     } else {
       alert(response.data.message); // Display error message
