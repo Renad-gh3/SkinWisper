@@ -42,12 +42,33 @@ import  image_18 from './18.jpg';
 import  image_19 from './cleanser category.jpg';
 import  image_20 from './sunscreen category.jpg';
 import  image_21 from './Moisturizer category.jpg';
+// import sol1 from './poressolution.jpeg'
+// import sol2 from './acnesolution.jpeg'
+// import sol3 from './2.jpeg'
+// import sol5 from './hyposolution.webp'
+// import sol6 from './LINES_SOLUTION.jpeg'
+// import sol4 from './darksolution.jpeg'
+import sol1 from './poressolution.jpeg';
+import sol2 from './acnesolution.jpeg';
+import sol3 from './Darks.jpeg';
+import sol4 from './antiSolution.jpeg';
+import sol5 from './hyposolution.webp';
+import sol6 from './LINES_SOLUTION.jpeg';
 
 
 
 
-//import Box1 from './Box1.png'
 
+export const MapImage = [
+    { menu_name: "Acne", menu_image: sol2 },
+    { menu_name: "Large Pores", menu_image: sol1 },
+    { menu_name: "Anti Aging", menu_image: sol4 },
+    { menu_name: "Dry Skin and Flakes", menu_image: sol3 },
+    { menu_name: "Dark Circles", menu_image: sol3 },
+    { menu_name: "Hyperpigmentation", menu_image: sol5 },
+    { menu_name: "Fine Lines and Wrinkles", menu_image: sol6 },
+  ];
+  
 export const menu_list = [
     { menu_name:"Combination Skin",menu_image: combination },
     {menu_name:"Normal Skin", menu_image: normal },
@@ -73,7 +94,7 @@ export const assets = {
     profile_icon,
     logout_icon,
     header,
-    menu_list,problemHeader
+    menu_list,problemHeader,
 }
 
 export const skincareMenu = [
