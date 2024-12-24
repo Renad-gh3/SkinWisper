@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useRef } from "react";
 import axios from "axios";
 import "./SkinTypeRoutine.css";
 
@@ -10,6 +10,8 @@ const SkinTypeRoutine = ({ category }) => {
     stage2: false,
     stage3: false,
   });
+
+  const routineRef = useRef(null);
 
   const toggleStage = (stage) => {
     setShowStages((prev) => ({
@@ -24,7 +26,7 @@ const SkinTypeRoutine = ({ category }) => {
         const response = await axios.get(
 
           "http://localhost:5000/api/SkinType/list"
-
+        )
         setRoutineData(response.data.data);
       } catch (error) {
         console.error("Error fetching routine data:", error);
