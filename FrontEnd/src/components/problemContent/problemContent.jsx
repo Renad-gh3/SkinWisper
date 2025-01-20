@@ -76,7 +76,7 @@ const ProblemContent = ({ category }) => {
     const fetchProblemData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5002/api/SkinProblem/list"
+          "http://localhost:5000/api/SkinProblem/list"
         );
         setProblemData(response.data.data);
       } catch (error) {
@@ -103,7 +103,9 @@ const ProblemContent = ({ category }) => {
   }, [category, problemData]);
 
   const getImageForCategory = (categoryName) => {
-    const foundImage = MapImage.find((item) => item.menu_name === categoryName);
+    const foundImage = MapImage.find(
+      (item) => item.menu_name.toLowerCase() === categoryName.toLowerCase()
+    );
     return foundImage ? foundImage.menu_image : null;
   };
 

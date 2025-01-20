@@ -79,9 +79,9 @@ export const menu_list = [
 export const menu_problem = [
     { menu_name:"Acne",menu_image: Acne},
     {menu_name:"Large Pores", menu_image: Large_Pores },
-    { menu_name:"Anti_Aging",menu_image: Anti_Aging },
+    { menu_name:"Anti Aging",menu_image: Anti_Aging },
     { menu_name:"Dry Skin and flakes",menu_image:Dry_Skin_and_flakes },
-    { menu_name:"Dark_Circles",menu_image: Dark_Circles },
+    { menu_name:"Dark Circles",menu_image: Dark_Circles },
     { menu_name:"Hyperpigmentation",menu_image: Hyperpigmentation },
     { menu_name:"Fine Lines and Wrinkles",menu_image: Fine_Lines_and_Wrinkles}
 ];
