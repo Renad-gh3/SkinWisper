@@ -227,34 +227,35 @@
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header {
-    height: 350px;
-  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      height: 350px;
+    }
 
-  .header-content {
-    max-width: 90%;
-    padding: 15px;
-  }
+    .header-content {
+      max-width: 90%;
+      padding: 15px;
+    }
 
-  .header-content h1 {
-    font-size: 2.2rem;
-  }
+    .header-content h1 {
+      font-size: 2.2rem;
+    }
 
-  .header-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
+    .header-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
 
-  .get-started-button {
-    padding: 10px 30px;
-    font-size: 1rem;
-  }
+    .get-started-button {
+      padding: 10px 30px;
+      font-size: 1rem;
+    }
 
-  .quiz-popup {
-    width: 100%;
-    max-width: 95%;
-    padding: 15px;
+    .quiz-popup {
+      width: 100%;
+      max-width: 95%;
+      padding: 15px;
+    }
   }
 }
