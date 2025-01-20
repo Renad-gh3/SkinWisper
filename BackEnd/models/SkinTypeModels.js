@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// Updated Schema
 const SkinTypeSchema = new mongoose.Schema({
   stage1: { type: String, required: true },
   stage2: { type: String, required: true },

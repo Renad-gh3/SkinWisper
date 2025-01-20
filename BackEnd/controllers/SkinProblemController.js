@@ -2,10 +2,8 @@ import SkinProblemModel from "../models/SkinProblemModels.js";
 import fs from "fs";
 
 //add Product Items
-
 const addSP = async (req, res) => {
   //let image_filename = `${req.file.filename}`;
-
   const SkinProblem = new SkinProblemModel({
     ProblemDescription: req.body.ProblemDescription,
     Solution: req.body.Solution,

@@ -12,7 +12,7 @@ const orderSchema = new mongoose.Schema(
     country: { type: String, required: true },
     phone: { type: Number, required: true },
     date: { type: Date, default: Date.now },
-    cartData: { type: mongoose.Schema.Types.Mixed, default: {} }, // Cart data
+    cartData: { type: mongoose.Schema.Types.Mixed, default: {} },
   },
   { minimize: false }
 );

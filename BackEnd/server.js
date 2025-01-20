@@ -5,11 +5,11 @@ import SkinTRouter from "./routes/SkinTypeRoute.js";
 import ProductsRouter from "./routes/ProductsRoute.js";
 import SkinProblemRouter from "./routes/SkinProblemRoute.js";
 import userRouter from "./routes/userRoute.js";
-import 'dotenv/config'
+import "dotenv/config"; // Load environment variables from .env file
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 
-// app configr
+// app config
 const app = express();
 const port = 5000;
 
@@ -20,7 +20,7 @@ app.use(cors());
 //db connection
 connectDB();
 
-//api endpoints
+// api endpoints
 app.use("/api/SkinType", SkinTRouter);
 app.use("/api/Products", ProductsRouter);
 app.use("/api/SkinProblem", SkinProblemRouter);
@@ -29,13 +29,10 @@ app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
-
 app.get("/", (req, res) => {
   res.send("API WORKING");
 });
 
 app.listen(port, () => {
-  console.log(`server started on http://localhost:${port}`);
+  console.log(`Server started on http://localhost:${port}`);
 });
-
-// mongodb+srv://SkinWis:987654321@cluster0.pavkx.mongodb.net/?

@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// Updated Schema
 const SkinProblemSchema = new mongoose.Schema({
   ProblemDescription: { type: String, required: true },
   Solution: { type: String, required: true },
@@ -8,6 +7,7 @@ const SkinProblemSchema = new mongoose.Schema({
 });
 
 const SkinProblemModel =
-  mongoose.models.SkinProblem || mongoose.model("SkinProblem", SkinProblemSchema);
+  mongoose.models.SkinProblem ||
+  mongoose.model("SkinProblem", SkinProblemSchema);
 
 export default SkinProblemModel;

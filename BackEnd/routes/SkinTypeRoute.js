@@ -1,11 +1,10 @@
 import express from "express";
-import { addST , listST , removeST} from "../controllers/SkinTypeController.js";
+import { addST, listST, removeST } from "../controllers/SkinTypeController.js";
 import multer from "multer";
 
 const SkinTRouter = express.Router();
 
-//Image Stroage Engine..
-
+//Image Stroage Engine
 const storage = multer.diskStorage({
   destination: "uploads",
   filename: (req, file, cb) => {

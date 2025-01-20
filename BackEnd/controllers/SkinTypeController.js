@@ -13,8 +13,9 @@ const addST = async (req, res) => {
     S2suggestion: req.body.S2suggestion,
     S3product: req.body.S3product,
     S3suggestion: req.body.S3suggestion,
-    skinType: req.body.skinType.toLowerCase(), // Ensure consistency in skinType input
-    period: req.body.period.toLowerCase(), // Ensure consistency in period input
+    // Ensure consistency in skinType input \ period input
+    skinType: req.body.skinType.toLowerCase(),
+    period: req.body.period.toLowerCase(),
   });
 
   try {
