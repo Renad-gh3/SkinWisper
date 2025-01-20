@@ -1,25 +1,25 @@
 .place-order {
   display: flex;
   align-items: start;
-  justify-content: center; /*space-between;*/
-  gap: 30px; /*50px*/
-  margin-top: 30px; /*100px*/
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 .place-order-left {
-  width: 60%; /*100%*/
-  max-width: 400px; /*max(30%,500px);*/
+  width: 60%;
+  max-width: 400px;
 }
 .place-order-left .title {
-  font-size: 24px; /*30px;*/
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 30px; /*50px;*/
+  margin-bottom: 30px;
   color: black;
 }
 .place-order-left input {
-  margin-bottom: 10px; /*15px;*/
+  margin-bottom: 10px;
   width: 100%;
-  padding: 8px; /*10px;*/
+  padding: 8px;
   border: 1px solid #c5c5c5;
   border-radius: 4px;
   outline-color: #5b9c3d;
@@ -29,16 +29,15 @@
   gap: 10px;
 }
 .place-order-right {
-  width: 20%; /*100%;*/
-  max-width: max(40%, 500px); /*400px;*/ /*max(40%,500px);*/
+  width: 20%;
+  max-width: max(40%, 500px);
   margin-top: 59px;
 }
 .place-order .cart-total button {
-  margin-top: 20px; /*30px;*/
-  width: 100%; /*i added */
+  margin-top: 20px;
+  width: 100%;
 }
 
-/* POPUP */
 .popup-overlay {
   position: fixed;
   top: 0;

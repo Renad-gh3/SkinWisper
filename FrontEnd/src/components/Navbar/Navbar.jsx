@@ -6,10 +6,10 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { StoreContext } from "../pages/StoreContext";
 
-
 const Navbar = ({ activeSection, setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
-  const { getTotalCartAmount, token, setToken, resetCart} = useContext(StoreContext);
+  const { getTotalCartAmount, token, setToken, resetCart } =
+    useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -21,9 +21,8 @@ const Navbar = ({ activeSection, setShowLogin }) => {
   };
 
   const handleLoginClick = () => {
-    setShowLogin((prevState) => !prevState); // Toggles login pop-up
+    setShowLogin((prevState) => !prevState);
   };
-  //const [getTotalCartAmount,token,setToken] = useState(StoreContext);
 
   return (
     <div className="navbar">

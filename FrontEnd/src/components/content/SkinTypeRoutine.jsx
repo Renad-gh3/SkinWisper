@@ -1,4 +1,4 @@
-import React, { useState, useEffect , useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./SkinTypeRoutine.css";
 
@@ -24,9 +24,8 @@ const SkinTypeRoutine = ({ category }) => {
     const fetchRoutineData = async () => {
       try {
         const response = await axios.get(
-
           "http://localhost:5000/api/SkinType/list"
-        )
+        );
         setRoutineData(response.data.data);
       } catch (error) {
         console.error("Error fetching routine data:", error);
@@ -46,7 +45,7 @@ const SkinTypeRoutine = ({ category }) => {
   // Scroll to the routine section when the category changes
   useEffect(() => {
     if (filteredRoutine.length > 0 && routineRef.current) {
-      routineRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scrolling
+      routineRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [filteredRoutine]);
 
@@ -54,7 +53,8 @@ const SkinTypeRoutine = ({ category }) => {
     <div className="routine-container">
       <h2>Products in This Routine</h2>
       <p>
-        SkinWhisper's carefully curated products create a routine that you and your skin will love.
+        SkinWhisper's carefully curated products create a routine that you and
+        your skin will love.
       </p>
 
       {/* Toggle Buttons for Morning/Evening */}
@@ -146,7 +146,9 @@ const SkinTypeRoutine = ({ category }) => {
             </div>
           </>
         ) : (
-          <p className="no-routine-message">No routine found for this skin type and period.</p>
+          <p className="no-routine-message">
+            No routine found for this skin type and period.
+          </p>
         )}
 
         {filteredRoutine.length === 0 && (
@@ -154,7 +156,6 @@ const SkinTypeRoutine = ({ category }) => {
             No routine found for this skin type and period.
           </p>
         )}
-
       </div>
     </div>
   );

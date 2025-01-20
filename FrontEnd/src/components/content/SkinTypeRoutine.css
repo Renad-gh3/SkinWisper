@@ -1,109 +1,3 @@
-/*.routine-container {
-  text-align: left;
-  padding: 30px;
-  font-family: "Roboto", sans-serif;
-  max-width: 100%;
-  margin: 0 auto;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-
-.routine-container h2,
-.routine-container p {
-  text-align: center; 
-}
-
-.routine-container h2 {
-  font-size: 1.8rem;
-  color: #2e3a59;
-  margin-bottom: 10px;
-}
-
-.routine-toggle-container {
-  text-align: center; 
-  margin-bottom: 20px;
-}
-
-.routine-container p {
-  font-size: 1rem;
-  color: #5a6473;
-  margin-bottom: 20px;
-}
-
-
-.routine-toggle {
-  display: inline-flex;
-  border: 1px solid #5b9c3d;
-  border-radius: 25px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.routine-toggle button {
-  padding: 10px 25px;
-  border: none;
-  background: none;
-  color: #5b9c3d;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.routine-toggle button.active {
-  background-color: #5b9c3d;
-  color: white;
-}
-
-.routine-toggle button:hover {
-  background-color: #4a8031;
-  color: white;
-}
-
-
-.routine-steps {
-  margin-top: 20px;
-}
-
-.routine-stage {
-  border-bottom: 1px solid #d9d9d9;
-  padding: 10px 0;
-}
-
-.routine-step-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.routine-step-header h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #2e3a59;
-}
-
-.routine-step-header span {
-  font-size: 1.5rem;
-  color: #2e3a59;
-}
-
-.routine-step-details {
-  padding: 10px 0;
-  font-size: 1rem;
-  color: #5a6473;
-}
-
-
-@media (max-width: 768px) {
-  .routine-toggle button {
-    padding: 8px 15px;
-  }
-
-  .routine-step-header h3 {
-    font-size: 1rem;
-  }
-}*/
-/* Routine Container */
 .routine-container {
   font-family: "Roboto", sans-serif;
   padding: 30px;
@@ -115,7 +9,7 @@
 .routine-container h2 {
   font-size: 2rem;
   text-align: center;
-  color: #4a8031; /* Green for branding */
+  color: #4a8031;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -123,12 +17,11 @@
 .routine-container p {
   text-align: center;
   font-size: 1.1rem;
-  color: #5a6473; /* Neutral gray for subtitle */
+  color: #5a6473;
   margin-bottom: 20px;
-  line-height: 1.6; /* Improve readability */
+  line-height: 1.6;
 }
 
-/* Toggle Buttons */
 .routine-toggle-container {
   text-align: center;
   margin-bottom: 30px;
@@ -153,8 +46,8 @@
 }
 
 .routine-toggle button.active {
-  background-color: #4a8031; /* Green for active button */
-  color: white; /* White text for better contrast */
+  background-color: #4a8031;
+  color: white;
 }
 
 .routine-toggle button:hover {
@@ -162,82 +55,79 @@
   color: white;
 }
 
-/* Routine Cards */
 .routine-card-container {
   display: flex;
   justify-content: space-around;
   gap: 20px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.routine-card {
-  flex: 1;
-  max-width: calc(33.33% - 20px);
-  background: #ffffff; /* White card background */
-  border-radius: 15px;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.routine-card:hover {
-  transform: translateY(-5px); /* Slight upward hover effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Routine Circle */
-.routine-card .routine-circle {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  background: #4a8031; /* Green for branding */
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Ensure proper spacing */
-}
-
-/* Stage Content */
-.routine-content h3 {
-  font-size: 1.3rem;
-  color: #4a8031; /* Green for headings */
-  font-weight: 600;
-  margin-top: 30px; /* Add spacing from the number circle */
-  margin-bottom: 10px; /* Standard spacing below the heading */
-}
-
-.routine-content p {
-  font-size: 1rem;
-  color: #5a6473;
-  margin: 5px 0;
-  line-height: 1.5;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .routine-card-container {
-    flex-direction: column;
-    align-items: center;
-  }
+  flex-wrap: wrap;
 
   .routine-card {
-    max-width: 100%;
+    flex: 1;
+    max-width: calc(33.33% - 20px);
+    background: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .routine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
   .routine-card .routine-circle {
-    top: -15px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #4a8031;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .routine-content h3 {
+    font-size: 1.3rem;
+    color: #4a8031;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .routine-content p {
+    font-size: 1rem;
+    color: #5a6473;
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .routine-card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .routine-card {
+      max-width: 100%;
+    }
+
+    .routine-card .routine-circle {
+      top: -15px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
   }
 }

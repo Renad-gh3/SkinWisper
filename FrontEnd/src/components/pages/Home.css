@@ -1,4 +1,3 @@
-
 .carousel {
   position: relative;
   display: flex;
@@ -17,19 +16,16 @@
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
 }
 
-
 .carousel-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8); /* Darkened for better text visibility */
+  filter: brightness(0.8);
   transition: transform 0.5s ease;
- 
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
 
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 .carousel-image:hover {
   transform: scale(1.05);
@@ -47,19 +43,18 @@
 }
 
 .carousel-text h2 {
-  font-size: 3.5rem; /* Larger heading */
+  font-size: 3.5rem;
   margin: 0;
   font-weight: bold;
 }
 
 .carousel-text p {
-  font-size: 1.5rem; /* Slightly larger description */
+  font-size: 1.5rem;
   margin: 10px 0;
 }
 
-
 .learn-more-button {
-  background: linear-gradient(90deg, #4CAF50 0%, #88D27A 100%);
+  background: linear-gradient(90deg, #4caf50 0%, #88d27a 100%);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -74,7 +69,6 @@
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -86,6 +80,7 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
+  width: 50px;
   z-index: 1;
   transition: background-color 0.3s;
 }
@@ -134,11 +129,11 @@
   text-align: center;
   cursor: pointer;
   position: relative;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .service-title-above {
@@ -146,20 +141,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.5em; 
+  font-size: 1.5em;
   font-weight: bold;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .service-image {
   width: 100%;
-  height: 200px; 
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
-
 
 .special-section {
   text-align: center;
@@ -209,7 +203,7 @@
 
 .feature-card h3 {
   font-size: 1.5em;
-  color: #4CAF50; 
+  color: #4caf50;
   margin: 15px 0;
   font-weight: bold;
 }
@@ -225,29 +219,36 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .feature-card {
     width: 80%;
     margin-bottom: 20px;
   }
   .carousel-text h2 {
     line-height: 1.2;
-    font-size: 2.2rem; /* Adjust for smaller screens */
+    font-size: 2.2rem;
   }
 
   .carousel-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 0 20px; /* Add padding for better spacing */
+    padding: 0 20px;
   }
 }
-/* Fade-in animation */
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.carousel-text h2, .carousel-text p {
+.carousel-text h2,
+.carousel-text p {
   animation: fadeIn 1s ease forwards;
 }
 
@@ -273,4 +274,3 @@
 .indicator.active {
   opacity: 1;
 }
-

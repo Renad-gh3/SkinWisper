@@ -4,7 +4,8 @@ import { StoreContext } from "./StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount, List, cartItems, resetCart } = useContext(StoreContext);
+  const { getTotalCartAmount, List, cartItems, resetCart } =
+    useContext(StoreContext);
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -64,8 +65,8 @@ const PlaceOrder = () => {
       zipCode: data.zipcode,
       country: data.country,
       phone: data.phone,
-      email: userEmail, // Include user's email
-      items: orderItems, // Include cart items
+      email: userEmail,
+      items: orderItems,
     };
 
     // Log the order details before sending it to the backend

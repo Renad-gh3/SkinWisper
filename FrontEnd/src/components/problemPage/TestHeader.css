@@ -1,126 +1,116 @@
-
-/* Main Header Styling */
 .test-header {
-    display: flex;
-    height: 450px;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #5B9C3D, #3A5E2D); /* Gradient background */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  display: flex;
+  height: 450px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #5b9c3d, #3a5e2d);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Gradient Overlay */
 .test-header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15));
-    padding: 0 60px;
-    
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.15)
+  );
+  padding: 0 60px;
 }
 
-
-
-/* Right-Aligned Content */
 .test-header-content {
-    position: relative;
-    text-align: left;
-    z-index: 2;
-    max-width: 500px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3); /* Slight transparency for a softer look */
-    border-radius: 8px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    transform: translateX(-20px); /* Subtle entrance */
-    opacity: 0;
-    animation: slideIn 1.5s ease forwards; /* Animation for entrance */
+  position: relative;
+  text-align: left;
+  z-index: 2;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 1.5s ease forwards;
 }
 
 @keyframes slideIn {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-
-/* Header Title */
 .test-header-content h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #ffffff; /* White text color */
-    line-height: 1.2;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Subtitle */
 .test-header-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #f0f0f0;
-    line-height: 1.4;
-    text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+  line-height: 1.4;
+  text-align: left;
 }
 
-/* CTA Button */
 .get-started-button {
-    background-color: #5B9C3D;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-color: #5b9c3d;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .get-started-button:hover {
-    background: linear-gradient(to right, #A8D5A2, #5B9C3D); /* Light to main green gradient */
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right, #a8d5a2, #5b9c3d);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .test-header {
-        height: 350px;
-    }
+  .test-header {
+    height: 350px;
+  }
 
-    .test-header-content {
-        max-width: 90%;
-        padding: 15px;
-    }
+  .test-header-content {
+    max-width: 90%;
+    padding: 15px;
+  }
 
-    .test-header-content h1 {
-        font-size: 2.2rem;
-    }
+  .test-header-content h1 {
+    font-size: 2.2rem;
+  }
 
-    .test-header-content p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
+  .test-header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 
-    .get-started-button {
-        padding: 10px 30px;
-        font-size: 1rem;
-    }
+  .get-started-button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
 }
-

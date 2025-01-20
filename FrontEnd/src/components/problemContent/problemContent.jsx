@@ -1,68 +1,7 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-// import "./problemContent.css";
-
-// const ProblemContent = ({ category }) => {
-//   const [problemData, setProblemData] = useState([]);
-//   const [selectedProblem, setSelectedProblem] = useState(null);
-// //هنا في المفروض اشياء بس عشان غيرنا الديزاين تغيرت 
-//   useEffect(() => {
-//     const fetchProblemData = async () => {
-//       try {
-//         const response = await axios.get(
-//           "http://localhost:5001/api/SkinProblem/list"
-//         );
-//         setProblemData(response.data.data);
-//       } catch (error) {
-//         console.error("Error fetching problem data:", error);
-//       }
-//     };
-
-//     fetchProblemData();
-//   }, []);
-
-//   useEffect(() => {
-//     if (category !== "All") {
-//       const foundProblem = problemData.find(
-//         (item) => item.SkinProblem === category
-//       );
-//       setSelectedProblem(foundProblem || null);
-//     } else {
-//       setSelectedProblem(null);
-//     }
-//   }, [category, problemData]);
-
-//   return (
-//     <div className="problem-container">
-//       {selectedProblem ? (
-//         <div className="problem-boxes">
-//           {/* Problem Description */}
-//           <div className="problem-box">
-//             <h2>Problem Description</h2>
-//             <p>{selectedProblem.ProblemDescription}</p>
-//           </div>
-
-//           {/* Problem Solution */}
-//           <div className="problem-box">
-//             <h2>Solution</h2>
-//             <p>{selectedProblem.Solution}</p>
-//           </div>
-//         </div>
-//       ) : (
-//         <div className="problem-placeholder">
-//           <h2>Select a Skin Problem</h2>
-//           <p>Choose a category to explore detailed descriptions and solutions.</p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ProblemContent;
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./problemContent.css";
-import { MapImage } from "../../assets/assets"; // Map with public paths
+import { MapImage } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
 
 const ProblemContent = ({ category }) => {

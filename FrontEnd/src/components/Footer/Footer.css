@@ -1,129 +1,124 @@
-/* Footer container */
 .footer {
-    background-color: #5b9c3d; /* Darker green for better contrast */
-    padding: 30px 0; /* Adjust padding to create balance */
-    color: white;
-    text-align: center;
-    width: 100%;
+  background-color: #5b9c3d;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+  width: 100%;
 }
 
-/* Flex container for footer content */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
-    align-items: flex-start;
-    padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  padding: 0 30px;
 }
 
-/* Remove the lines/dividers */
 .footer-about,
 .footer-center {
-    border-right: none; /* Remove the dividers between sections */
+  border-right: none;
 }
 
 /* About Us Section */
 .footer-about {
-    flex: 1;
-    text-align: left;
+  flex: 1;
+  text-align: left;
 }
 
 .footer-about h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .footer-about p {
-    font-size: 0.9rem;
-    font-weight: normal;
-    max-width: 400px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: normal;
+  max-width: 400px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* Links Section */
 .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .footer-links p {
-    font-size: 0.9rem;
-    margin: 0;
-    text-transform: uppercase;
-    color: #e0e0e0;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  font-size: 0.9rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .footer-links p:hover {
-    color: white; /* On hover, change link color to white */
+  color: white;
 }
 
 /* Contact Us Section */
 .footer-center {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .footer-center h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 /* Social Icons */
 .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Add spacing between icons */
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 .social-icon {
-    width: 50px;  /* Increased icon size */
-    height: 50px; /* Increased icon size */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
-    opacity: 1;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
-/* Made in Saudi Section (Now centered below Contact Us) */
 .footer-made-in-saudi {
-    margin-top: 20px; /* Space above the Saudi icon */
-    text-align: center;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .made-in-saudi-icon {
-    width: 70px; /* Icon size */
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
-/* General Footer Typography */
 .footer h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .footer p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
 }
-@media (max-width:750px) {
-    .footer-content{
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-    }
-    footer-copyright{
-        text-align: center;
-    }
+@media (max-width: 750px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  footer-copyright {
+    text-align: center;
+  }
 }
